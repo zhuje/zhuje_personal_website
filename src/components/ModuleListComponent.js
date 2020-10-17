@@ -3,6 +3,14 @@ import {connect} from "react-redux";
 import moduleService from "../services/ModuleService"
 import {Link} from "react-router-dom";
 
+
+// ModuleListComponent -- A stateless class component that can dynamically render the
+// the list of modules for a course. The state is managed using redux. This ia a component
+// of the CourseEditor Component
+// @ course={} -- current course -- initialized as an empty object '={}' so that we don't crash if it is an empty object
+// @ modules=[] -- list of modules for the course
+// @ deleteModule, createModule, updateModule -- from service/ModuleServices (relay information to and from server)
+
 const ModuleListComponent = (
   {
     course={},
@@ -53,6 +61,7 @@ const ModuleListComponent = (
         )
       }
     </ul>
+      {/* Pass the selected course so that we can create a new module for it ' createModule(course) */}
     <button
       onClick={() => createModule(course)}>
       Create

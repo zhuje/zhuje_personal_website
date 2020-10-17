@@ -6,8 +6,10 @@ class CourseListComponent extends React.Component {
 
   state = {
     courses: [],
-    courseBeingEdited: {}
-  }
+    courseBeingEdited: {},
+}
+
+
 
   componentDidMount() {
     findAllCourses()

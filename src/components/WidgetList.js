@@ -46,8 +46,12 @@ const WidgetList = ({
                   </button>
                 </span>
             }
+
           </li>
+
         )
+
+
       }
     </ul>
     <button onClick={createWidget}>Create</button>

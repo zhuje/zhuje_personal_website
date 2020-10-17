@@ -17,7 +17,7 @@ const LessonTabs = (
       {
         lessons.map(lesson =>
           <li key={lesson._id} className="nav-item">
-            <a class="nav-link">
+            <a className="nav-link">
             <button onClick={() => deleteLesson(lesson._id)}>
               <i className="fa fa-times"></i>
             </button>
@@ -28,19 +28,25 @@ const LessonTabs = (
                     <button onClick={() =>
                       updateLesson({...lesson, editing: true})
                     }>
-                <i className="fa fa-pencil"></i>
-              </button>
+                        <i className="fa fa-pencil"></i>
+                    </button>
                     {lesson.title}
                   </span>
               }
               {
                 lesson.editing &&
                   <span>
-              <button onClick={() =>
-                updateLesson({...lesson, editing: false})}>
-                <i className="fa fa-check"></i>
-              </button>
-                    <input value={lesson.title}/>
+
+                      <button onClick={() =>
+                        updateLesson({...lesson, editing: false})}>
+                        <i className="fa fa-check"></i>
+                      </button>
+                    <input onChange={(event) =>
+                        updateLesson({
+                            ...lesson,
+                            title: event.target.value
+                         })} value={lesson.title} />
+
                   </span>
               }
             </a>
@@ -61,9 +67,9 @@ const stateToPropertyMapper = (state) => ({
 const dispatchToPropertyMapper = (dispatch) => ({
   updateLesson: (newLesson) =>
     lessonService.updateLesson(newLesson)
-      .then(actuaLesson => dispatch({
+      .then(actualLesson => dispatch({
         type: "UPDATE_LESSON",
-        lesson: actuaLesson
+        lesson : newLesson
       })),
   deleteLesson: (lessonId) =>
     lessonService.deleteLesson(lessonId)
