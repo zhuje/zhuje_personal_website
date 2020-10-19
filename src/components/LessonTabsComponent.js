@@ -17,48 +17,53 @@ const LessonTabs = (
     deleteLesson,
     updateLesson
   }) =>
-  <div>
+  <div className={"container-fluid"}>
+      <div className={"row"}>
 
-      <h1>Lessons ({moduleId})</h1>
+      {/*<h1>Lessons ({moduleId})</h1>*/}
     <ul className="nav nav-tabs">
       {
         lessons.map(lesson =>
 
             // Delete
-          <li key={lesson._id} className="nav-item">
+          <li key={lesson._id} className="nav-item wbdv-editor-highlight">
             <a className="nav-link">
-                <button onClick={() => deleteLesson(lesson._id)}>
-                  <i className="fa fa-times"></i>
-                </button>
 
 
                   {/*Edit   */}
                   {
                     !lesson.editing &&
                       <span>
+
+                          <Link to={`/edit/${course._id}/modules/${moduleId}/lessons/${lesson._id}`}>
+                                 {lesson.title}
+                          </Link>
+
                         <button onClick={() =>
-                          updateLesson({...lesson, editing: true})
-                        }>
+                          updateLesson({...lesson, editing: true})}>
                             <i className="fa fa-pencil"></i>
                         </button>
-                           <Link to={`/edit/${course._id}/modules/${moduleId}/lessons/${lesson._id}`}>
-                                 {lesson.title}
-                            </Link>
+
                       </span>
                   }
                   {
                     lesson.editing &&
                       <span>
 
-                          <button onClick={() =>
-                            updateLesson({...lesson, editing: false})}>
-                            <i className="fa fa-check"></i>
-                          </button>
                         <input onChange={(event) =>
                             updateLesson({
                                 ...lesson,
                                 title: event.target.value
-                             })} value={lesson.title} />
+                         })} value={lesson.title} />
+                         <button onClick={() =>
+                             updateLesson({...lesson, editing: false})}>
+                            <i className="fa fa-check"></i>
+                        </button>
+
+                        {/* Delete */}
+                        <button onClick={() => deleteLesson(lesson._id)}>
+                            <i className="fa fa-times"></i>
+                        </button>
 
                       </span>
                   }
@@ -70,8 +75,9 @@ const LessonTabs = (
 
     {/*  Create */}
     <button onClick={() => createLessonForModule(moduleId)}>
-      Create
+        <i className="fa fa-plus fa-2x pull-right"></i>
     </button>
+  </div>
   </div>
 
 const stateToPropertyMapper = (state) => ({

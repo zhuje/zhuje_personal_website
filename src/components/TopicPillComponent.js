@@ -20,9 +20,9 @@ const TopicPills = ({
                     topics.map(topic =>
 
                         // Delete
-                        <li key={topic._id} className={"nav-item wbdv-pill-highlight"}>
+                        <li key={topic._id} className={"nav-item wbdv-editor-highlight"}>
 
-                            <a className={"nav-link"}>
+                            <a className={"nav-link"} >
 
 
                                 {/* Edit */}

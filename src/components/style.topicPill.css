@@ -1,7 +1,7 @@
 
 
-.active, .wbdv-pill-highlight:hover {
-    background-color: ghostwhite;
+.active, .wbdv-editor-highlight:hover {
+    background-color: orange;
     color: white;
 }
 
