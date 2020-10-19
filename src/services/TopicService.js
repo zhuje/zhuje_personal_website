@@ -12,12 +12,6 @@ export const findTopicsForLesson  = (lessonId) =>
     fetch(`${lessonUrl}/${lessonId}/topics`)
         .then(response => response.json());
 
-// // create a lesson for the parent module object
-// // give the moduleID so all its child lesson objects can inherit it
-// // pass in a newLesson object to add to the server
-// export const  createLessonForModule = (moduleId, lesson) =>
-// {}
-
 
 
 // createTopicsForLesson -- got to the server to put a new
@@ -33,11 +27,19 @@ export const  createTopicForLesson = (lessonId, topic) =>
     fetch(`${lessonUrl}/${lessonId}/topics`, {
         method: "POST",
         body: JSON.stringify(topic),
-        header: {
+        headers: {
             "content-type": "application/json"
         }
     }).then(response => response.json());
 
+export const updateTopic = (topic) =>
+    fetch(`${topicUrl}/${topic._id}`, {
+        method: "PUT",
+        body: JSON.stringify(topic),
+        headers: {
+            "content-type": "application/json"
+        }
+    }).then(response => response.json())
 
 export const deleteTopic = topicId =>
     fetch(`${topicUrl}/${topicId}`, {
@@ -51,4 +53,5 @@ export default {
     findTopicsForLesson,
     createTopicForLesson,
     deleteTopic,
+    updateTopic
 }

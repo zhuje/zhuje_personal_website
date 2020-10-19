@@ -2,6 +2,15 @@
 
 export const topicReducer = ( state={}, action) => {
     switch (action.type) {
+
+
+        case "UPDATE_TOPIC":
+
+            return {
+                ...state,
+                topics: state.topics.map(topic => topic._id === action.topic._id ? action.topic : topic)
+            }
+
         case "DELETE_TOPIC":
             return {
                 ...state,
