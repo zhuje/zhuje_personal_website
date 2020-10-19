@@ -12,8 +12,9 @@ const TopicPills = ({
                         deleteTopic,
                         updateTopic
 }) =>
-    <div>
-        <h1> Topics! ({lessonId}) </h1>
+    <div className={"container-fluid"}>
+        <div className={"row"}>
+        {/*<h1> Topics! ({lessonId}) </h1>*/}
             <ul className="nav nav-pills">
                 {
                     topics.map(topic =>
@@ -60,20 +61,18 @@ const TopicPills = ({
 
                                         </span>
                                 }
-
-
-
-
                             </a>
+
                         </li>
                     )
                 }
             </ul>
-
         {/* Create */}
         <button onClick={()=> createTopicForLesson(lessonId)}>
-            Create
+            <i className="fa fa-plus fa-2x"></i>
         </button>
+        </div>
+
     </div>
 
 
