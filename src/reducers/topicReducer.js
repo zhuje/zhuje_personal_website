@@ -1,0 +1,30 @@
+
+
+export const topicReducer = ( state={}, action) => {
+    switch (action.type) {
+        case "DELETE_TOPIC":
+            return {
+                ...state,
+                topics: state.topics.filter(topic => topic._id !== action.topicId)
+            }
+
+        case "FIND_TOPICS_FOR_LESSON":
+            return {
+                // copy the old state
+                ...state,
+                topics: action.topics,
+                lessonId: action.lessonId
+            }
+        case "CREATE_TOPIC_FOR_LESSON":
+            return {
+                ...state,
+                topics: [
+                    ...state.topics,
+                    action.topic
+                ]
+            }
+
+        default :
+            return state
+    }
+}
