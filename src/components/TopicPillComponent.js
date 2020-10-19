@@ -22,6 +22,10 @@ const TopicPills = ({
                         // Delete
                         <li key={topic._id} className={"nav-item wbdv-editor-highlight"}>
 
+                            {/* Conditional styling --  'topic.editing ? "active" : ""
+                                saying if its TRUE that the topic-object is editing 'topic.editing
+                                '?' THEN  --- "className is 'active'" --- ELSE " : " -- className={""} */}
+                            <div className={topic.editing ? "active": ""}>
                             <a className={"nav-link"} >
 
 
@@ -62,6 +66,7 @@ const TopicPills = ({
                                         </span>
                                 }
                             </a>
+                            </div>
 
                         </li>
                     )
