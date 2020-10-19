@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import topicService from "../services/TopicService";
-
+import "./style.topicPill.css"
 
 // Extract the parameter 'topics' from
 // the stateToPropertyMapper
@@ -19,7 +19,7 @@ const TopicPills = ({
                     topics.map(topic =>
 
                         // Delete
-                        <li key={topic._id} className={"nav-item"}>
+                        <li key={topic._id} className={"nav-item wbdv-pill-highlight"}>
                             <a className={"nav-link"}>
                                 <button onClick={() => deleteTopic(topic._id)}>
                                     <i className="fa fa-times"></i>
