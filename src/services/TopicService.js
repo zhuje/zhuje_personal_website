@@ -1,8 +1,8 @@
 
 // parentComponent
-const lessonUrl = "https://wbdv-generic-server.herokuapp.com/api/jannunzi2/lessons"
+const lessonUrl = "https://wbdv-generic-server.herokuapp.com/api/zhuje/lessons"
 // childComponent
-const topicUrl = "https://wbdv-generic-server.herokuapp.com/api/jannunzi2/topics"
+const topicUrl = "https://wbdv-generic-server.herokuapp.com/api/zhuje/topics"
 
 
 // findTopicsForLesson() -- takes a lessonID to find all the
