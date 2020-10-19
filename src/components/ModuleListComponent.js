@@ -11,6 +11,10 @@ import {Link} from "react-router-dom";
 // @ modules=[] -- list of modules for the course
 // @ deleteModule, createModule, updateModule -- from service/ModuleServices (relay information to and from server)
 
+
+
+
+
 const ModuleListComponent = (
   {
     course={},
@@ -22,50 +26,78 @@ const ModuleListComponent = (
     ok,
 }) =>
   <div>
-    <h1>Modules for {course.title}</h1>
-    <ul>
+
+      {/*<button className={"wbdv-go-back-btn"}  onClick={()=> goBack()}>Go Back</button>*/}
+
+
+
+    <h3>Modules for Course: </h3>
+      <h5> {course.title}  </h5>
+
+      <nav className={"navbar bg-light"}>
+      <ul className={"navbar-nav"}>
       {
         modules.map(module =>
-          <li key={module._id}>
-            <button
-              onClick={() => deleteModule(module)}>
-              Delete
-            </button>
+          <li key={module._id} className={"nav-item"}>
+
+
             {
               !module.editing &&
                 <span>
-                  <button onClick={() => edit(module)}>
-                    <i className="fa fa-pencil"></i>
-                  </button>
-                  <Link to={`/edit/${course._id}/modules/${module._id}`}>
-                    {module.title}
-                  </Link>
+
+                    {/* Module Name / Render Module's Lessons */}
+                    <Link to={`/edit/${course._id}/modules/${module._id}`}>
+                        {module.title}
+                    </Link>
+
+                    {/* Edit Module Name */}
+                    <button onClick={() => edit(module)}>
+                        <i className="fa fa-pencil"></i>
+                    </button>
+
+
                 </span>
             }
             {
               module.editing &&
               <span>
-                <button
-                  onClick={() => ok(module)}>
-                  Ok
-                </button>
-                <input
-                  onChange={(event) => updateModule({
-                    ...module,
-                    title: event.target.value
-                  })}
+
+                {/*  Input Field to Edit Module Name*/}
+                <input onChange={(event) => updateModule({
+                        ...module,
+                        title: event.target.value
+                        })}
                   value={module.title}/>
+
+                  {/* Ok */}
+                  <button onClick={() => ok(module)}>
+                    Ok
+                  </button>
+
+                  {/* Delete */}
+                  <button onClick={() => deleteModule(module)}>
+                      Delete
+                  </button>
+
+
               </span>
+
+
             }
           </li>
         )
       }
     </ul>
+      </nav>
+
+
       {/* Pass the selected course so that we can create a new module for it ' createModule(course) */}
-    <button
+    <div className={"row pull-right"}>
+      <button
       onClick={() => createModule(course)}>
-      Create
+        <i className="fa fa-plus fa-2x pull-right"></i>
     </button>
+    </div>
   </div>
 
 // export default ModuleListComponent

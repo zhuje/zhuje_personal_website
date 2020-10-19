@@ -12,6 +12,12 @@ import topicService from "../services/TopicService"
 import TopicPillComponent from "./TopicPillComponent";
 import TopicPills from "./TopicPillComponent";
 
+
+function goBack() {
+    alert("Go Back REACHED")
+    window.history.back();
+}
+
 class CourseEditorComponent extends React.Component {
 
 
@@ -63,10 +69,20 @@ class CourseEditorComponent extends React.Component {
 
   }
 
+
+
   render() {
     return(
       <div>
-        <h1>Course Editor</h1>
+          <div className={"row"}>
+              <button className={"wbdv-go-back-btn"}  onClick={()=> goBack()}>
+                  <i className="fa fa-times fa-2x"></i>
+              </button>
+
+              <h1>Course Editor</h1>
+
+          </div>
+
         <div className="row">
           <div className="col-4">
             <ModuleListComponent/>

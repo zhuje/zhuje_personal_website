@@ -13,8 +13,15 @@ const TopicPills = ({
                         updateTopic
 }) =>
     <div className={"container-fluid"}>
+
+
+        <h5> Topics :   </h5>
+
         <div className={"row"}>
-        {/*<h1> Topics! ({lessonId}) </h1>*/}
+
+
+
+
             <ul className="nav nav-pills">
                 {
                     topics.map(topic =>
