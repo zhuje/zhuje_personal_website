@@ -21,59 +21,54 @@ const LessonTabs = (
 
         <h5> Lessons : </h5>
 
-
         <div className={"row"}>
-
             <ul className="nav nav-tabs">
                 {
                     lessons.map(lesson =>
 
-                                    // Delete
-                                    <li key={lesson._id} className="nav-item wbdv-editor-highlight">
-                                        <a className="nav-link">
 
+                        <li key={lesson._id} className="nav-item wbdv-editor-highlight">
+                            <a className="nav-link">
 
-                                            {/*Edit   */}
-                                            {
-                                                !lesson.editing &&
-                                                <span>
+                            {/*  Edit   */}
+                            {
+                                !lesson.editing &&
+                                <span>
+                                  <Link
+                                      to={`/edit/${course._id}/modules/${moduleId}/lessons/${lesson._id}`}>
+                                         {lesson.title}
+                                  </Link>
 
-                          <Link
-                              to={`/edit/${course._id}/modules/${moduleId}/lessons/${lesson._id}`}>
-                                 {lesson.title}
-                          </Link>
+                                  <button onClick={() =>
+                                        updateLesson({...lesson, editing: true})}>
+                                        <i className="fa fa-pencil"></i>
+                                  </button>
 
-                        <button onClick={() =>
-                            updateLesson({...lesson, editing: true})}>
-                            <i className="fa fa-pencil"></i>
-                        </button>
+                                </span>
+                            }
+                            {
+                                lesson.editing &&
+                                <span>
+                                    <input onChange={(event) =>
+                                        updateLesson({
+                                                         ...lesson,
+                                                         title: event.target.value
+                                                     })} value={lesson.title}/>
 
-                      </span>
-                                            }
-                                            {
-                                                lesson.editing &&
-                                                <span>
+                                     <button onClick={() =>
+                                         updateLesson({...lesson, editing: false})}>
+                                        <i className="fa fa-check"></i>
+                                    </button>
 
-                        <input onChange={(event) =>
-                            updateLesson({
-                                             ...lesson,
-                                             title: event.target.value
-                                         })} value={lesson.title}/>
-                         <button onClick={() =>
-                             updateLesson({...lesson, editing: false})}>
-                            <i className="fa fa-check"></i>
-                        </button>
+                                    {/* Delete */}
+                                    <button onClick={() => deleteLesson(lesson._id)}>
+                                        <i className="fa fa-times"></i>
+                                    </button>
 
-                                                    {/* Delete */}
-                                                    <button
-                                                        onClick={() => deleteLesson(lesson._id)}>
-                            <i className="fa fa-times"></i>
-                        </button>
-
-                      </span>
-                                            }
-                                        </a>
-                                    </li>
+                              </span>
+                            }
+                        </a>
+                    </li>
                     )
                 }
             </ul>
@@ -82,6 +77,8 @@ const LessonTabs = (
             <button onClick={() => createLessonForModule(moduleId)}>
                 <i className="fa fa-plus fa-2x pull-right"></i>
             </button>
+
+
         </div>
     </div>
 

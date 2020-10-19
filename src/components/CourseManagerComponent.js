@@ -15,15 +15,18 @@ export class CourseManagerComponent extends React.Component {
     return (
       <BrowserRouter>
         <div className="container">
+
           <Link to="/login">Login</Link> |
           <Link to="/register">Register</Link> |
           <Link to="/profile">Profile</Link> |
           <Link to="/table">Courses</Link> |
           <Link to="/grid">Grid</Link> |
           <Link to="/edit">Editor</Link>
+
           <Route path="/login" exact component={Login}/>
           <Route path="/register" exact component={Register}/>
           <Route path="/profile" exact component={Profile}/>
+
           <Route path="/table" exact>
             <CourseListComponent courses={this.state.courses} instructor="Jose"/>
           </Route>

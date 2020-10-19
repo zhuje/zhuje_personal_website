@@ -1,0 +1,118 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+
+#wbdv-hamburger{
+    margin-left:20px;
+    margin-top: 7px;
+    margin-right: 100px;
+
+}
+
+.wbdv-button-spacing{
+    margin: 10px;
+}
+
+
+.wbdv-card:hover{
+    /*width: 18rem;*/
+    flex: 1;
+    margin:10px;
+    background-color: darkseagreen;
+}
+
+.wbdv-card-deck{
+    display: flex;
+    /*flex-direction: row;*/
+    flex-wrap: wrap;
+
+}
+
+.wbdv-card-text{
+    font-size: small;
+    color: grey;
+}
+
+.wbdv-cards-per-row{
+    width: 33%;
+}
+
+.wbdv-container{
+    margin:10px;
+ }
+
+
+.wbdv-grid-heading{
+    margin:15px;
+    float: right;
+}
+
+.wbdv-float-right{
+    float:  right;
+}
+
+
+/*Course Grid Header */
+.wbdv-header-doc{
+    margin-top: 10px;
+    margin-left: 50px;
+    color: grey;
+}
+
+.wbdv-header-owner{
+    margin-left:400px;
+    color:grey;
+}
+
+.wbdv-header-buttons{
+    margin-left: 77px;
+    margin-top: -6px;
+}
+
+.wbdv-header-title{
+    margin-left:40px;
+}
+
+
+/* Add Course Button Formatting */
+
+.wbdv-add-course-button {
+    position: absolute;
+    color: red;
+}
+
+
+.wbdv-sticky-add-course-button {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    color: red;
+}
+
+
+/* CourseList-Row */
+.wbdv-course-row:hover {
+        background-color: darkseagreen;
+
+}
+
+/* Courses Header */
+.wbdv-courses-header{
+    margin:10px;
+}
+
+.wbdv-card-wrapper{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.wbdv-card-wrapper-input{
+    width: 100%;
+    flex-grow: 1;
+}

@@ -11,10 +11,10 @@ import LessonTabs from "./LessonTabsComponent";
 import topicService from "../services/TopicService"
 import TopicPillComponent from "./TopicPillComponent";
 import TopicPills from "./TopicPillComponent";
+import "./style.topicPill.css"
 
-
+// Clicking 'X' on the screen will allow you to go back to the previous route
 function goBack() {
-    alert("Go Back REACHED")
     window.history.back();
 }
 

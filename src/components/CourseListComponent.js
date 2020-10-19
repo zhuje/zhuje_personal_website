@@ -1,5 +1,6 @@
 import React from "react";
 import CourseRowComponent from "./CourseRowComponent";
+
 import {findAllCourses, updateCourse, deleteCourse, createCourse} from "../services/CourseService";
 
 class CourseListComponent extends React.Component {
@@ -55,7 +56,7 @@ class CourseListComponent extends React.Component {
   render() {
     return (
       <div>
-        <h1>Course List (For {this.props.instructor}) {this.props.term}</h1>
+          <h1>Course List </h1>
         <table className="table">
           {
             this.state.courses.map(course =>
