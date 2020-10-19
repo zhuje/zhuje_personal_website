@@ -4,3 +4,9 @@
     background-color: ghostwhite;
     color: white;
 }
+
+button {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+}

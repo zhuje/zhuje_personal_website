@@ -14,45 +14,55 @@ const TopicPills = ({
 }) =>
     <div>
         <h1> Topics! ({lessonId}) </h1>
-            <ul className="nav nav-tabs">
+            <ul className="nav nav-pills">
                 {
                     topics.map(topic =>
 
                         // Delete
                         <li key={topic._id} className={"nav-item wbdv-pill-highlight"}>
+
                             <a className={"nav-link"}>
-                                <button onClick={() => deleteTopic(topic._id)}>
-                                    <i className="fa fa-times"></i>
-                                </button>
+
 
                                 {/* Edit */}
                                 {
                                   !topic.editing &&
                                     <span>
+
+                                        {topic.title}
+
                                         <button onClick={() =>
                                             updateTopic({...topic, editing: true})
                                         }>
                                             <i className="fa fa-pencil"></i>
                                         </button>
 
-                                        {topic.title}
+
 
                                     </span>
                                 }
                                 {
                                     topic.editing &&
                                         <span>
+                                            <input onChange={(event) =>
+                                                updateTopic({
+                                                                ...topic,
+                                                                title: event.target.value
+                                                            })} value = {topic.title} />
                                             <button onClick={() =>
                                                 updateTopic({...topic, editing: false})}>
                                                 <i className="fa fa-check"></i>
                                             </button>
-                                            <input onChange={(event) =>
-                                                updateTopic({
-                                                    ...topic,
-                                                    title: event.target.value
-                                                })} value = {topic.title} />
+
+                                            <button onClick={() => deleteTopic(topic._id)}>
+                                                <i className="fa fa-times"></i>
+                                            </button>
+
                                         </span>
                                 }
+
+
+
 
                             </a>
                         </li>
