@@ -21,12 +21,14 @@ const LessonTabs = (
 
         <h5> Lessons : </h5>
 
+
         <div className={"row"}>
+
             <ul className="nav nav-tabs">
                 {
                     lessons.map(lesson =>
 
-
+                        // Delete
                         <li key={lesson._id} className="nav-item wbdv-editor-highlight">
                             <a className="nav-link">
 
@@ -49,12 +51,12 @@ const LessonTabs = (
                             {
                                 lesson.editing &&
                                 <span>
+
                                     <input onChange={(event) =>
                                         updateLesson({
                                                          ...lesson,
                                                          title: event.target.value
                                                      })} value={lesson.title}/>
-
                                      <button onClick={() =>
                                          updateLesson({...lesson, editing: false})}>
                                         <i className="fa fa-check"></i>
@@ -68,7 +70,7 @@ const LessonTabs = (
                               </span>
                             }
                         </a>
-                    </li>
+                                </li>
                     )
                 }
             </ul>
@@ -77,8 +79,6 @@ const LessonTabs = (
             <button onClick={() => createLessonForModule(moduleId)}>
                 <i className="fa fa-plus fa-2x pull-right"></i>
             </button>
-
-
         </div>
     </div>
 

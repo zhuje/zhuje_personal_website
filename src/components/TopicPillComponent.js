@@ -1,7 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
 import topicService from "../services/TopicService";
-import "./style.topicPill.css"
 
 // Extract the parameter 'topics' from
 // the stateToPropertyMapper
@@ -14,13 +13,9 @@ const TopicPills = ({
 }) =>
     <div className={"container-fluid"}>
 
-
         <h5> Topics :   </h5>
 
         <div className={"row"}>
-
-
-
 
             <ul className="nav nav-pills">
                 {

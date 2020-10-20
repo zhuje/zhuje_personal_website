@@ -12,6 +12,8 @@ import topicService from "../services/TopicService"
 import TopicPillComponent from "./TopicPillComponent";
 import TopicPills from "./TopicPillComponent";
 import "./style.topicPill.css"
+import {Tab} from "react-tabs";
+import {Nav, Row} from "react-bootstrap";
 
 // Clicking 'X' on the screen will allow you to go back to the previous route
 function goBack() {
@@ -74,6 +76,7 @@ class CourseEditorComponent extends React.Component {
   render() {
     return(
       <div>
+
           <div className={"row"}>
               <button className={"wbdv-go-back-btn"}  onClick={()=> goBack()}>
                   <i className="fa fa-times fa-2x"></i>
