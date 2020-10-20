@@ -2,6 +2,36 @@ import React from "react";
 import {connect} from "react-redux";
 import topicService from "../services/TopicService";
 
+function highlight ( topic, topics ) {
+    let allModule = document.getElementsByClassName("highlightModule");
+
+
+    for (let i = 0; i < topics.length; i++){
+        console.log( "i : " + i + topics[i]._id +  " " + topics[i].title)
+        let foo = document.getElementsByClassName(topics[i]._id) // get the DOM element by className =  ._id
+        console.log (foo + " : foo")
+        for (let f of foo ) {
+            console.log("f of foo element" + f)
+            f.className = " z highlightModule " + topics[i]._id
+        }
+    }
+
+    // alert(" Click for Module : " +  module.title )
+
+    let selectedModule = document.getElementsByClassName(topic._id)
+
+    // alert ("SelectedModule is : " + selectedModule.toString())
+
+    for (let item of selectedModule) {
+        console.log(item)
+        item.className += " active";
+        console.log(item)
+
+    }
+}
+
+
+
 // Extract the parameter 'topics' from
 // the stateToPropertyMapper
 const TopicPills = ({
@@ -21,7 +51,10 @@ const TopicPills = ({
                 {
                     topics.map(topic =>
 
-                        // Delete
+                                   <div  className={"highlightModule "+ topic._id} onClick={()=> highlight(topic, topics)}>
+
+
+                                  
                         <li key={topic._id} className={"nav-item wbdv-editor-highlight"}>
 
                             {/* Conditional styling --  'topic.editing ? "active" : ""
@@ -71,6 +104,7 @@ const TopicPills = ({
                             </div>
 
                         </li>
+                                   </div>
                     )
                 }
             </ul>

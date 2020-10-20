@@ -5,6 +5,38 @@ import lessonService from "../services/LessonService";
 import {Link} from "react-router-dom";
 import CourseRowComponent from "./CourseRowComponent";
 
+
+
+function highlight ( lesson, lessons ) {
+    let allModule = document.getElementsByClassName("highlightModule");
+
+
+    for (let i = 0; i < lessons.length; i++){
+        console.log( "i : " + i + lessons[i]._id +  " " + lessons[i].title)
+        let foo = document.getElementsByClassName(lessons[i]._id) // get the DOM element by className =  ._id
+        console.log (foo + " : foo")
+        for (let f of foo ) {
+            console.log("f of foo element" + f)
+            f.className = " z highlightModule " + lessons[i]._id
+        }
+    }
+
+    // alert(" Click for Module : " +  module.title )
+
+    let selectedModule = document.getElementsByClassName(lesson._id)
+
+    // alert ("SelectedModule is : " + selectedModule.toString())
+
+    for (let item of selectedModule) {
+        console.log(item)
+        item.className += " active";
+        console.log(item)
+
+    }
+}
+
+
+
 const LessonTabs = (
     {
         // State that is passed from 'connect' (below). 'Connect's Reducer state to this component.
@@ -28,8 +60,10 @@ const LessonTabs = (
                 {
                     lessons.map(lesson =>
 
-                        // Delete
-                        <li key={lesson._id} className="nav-item wbdv-editor-highlight">
+                                    <div  className={"highlightModule "+ lesson._id} onClick={()=> highlight(lesson, lessons)}>
+
+
+                                    <li key={lesson._id} className="nav-item wbdv-editor-highlight">
                             <a className="nav-link">
 
                             {/*  Edit   */}
@@ -71,6 +105,7 @@ const LessonTabs = (
                             }
                         </a>
                                 </li>
+                                    </div>
                     )
                 }
             </ul>

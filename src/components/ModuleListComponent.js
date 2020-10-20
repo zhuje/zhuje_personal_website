@@ -15,31 +15,12 @@ import {Row, Col, Nav, } from "react-bootstrap"
 // @ deleteModule, createModule, updateModule -- from service/ModuleServices (relay information to and from server)
 
 
-// <div className={topic.editing ? "active": ""}>
-
-
 
 
 
 function highlight ( module, modules ) {
-
-
-    // for (let i of modules ) {
-    //     console.log(i.title + " " + i._id);
-    //     let m = document.getElementsByClassName(i._id);
-    //     for (let j of m) {
-    //         console.log(m);
-    //         m.className += " active";
-    //     }
-    // }
-
     let allModule = document.getElementsByClassName("highlightModule");
 
-    // for (let item of allModule) {
-    //     console.log(item)
-    //     item.className += " highlightModule ";
-    //     console.log(item)
-    // }
 
     for (let i = 0; i < modules.length; i++){
         console.log( "i : " + i + modules[i]._id +  " " + modules[i].title)
@@ -51,16 +32,11 @@ function highlight ( module, modules ) {
         }
     }
 
-
-
-
-
     // alert(" Click for Module : " +  module.title )
 
     let selectedModule = document.getElementsByClassName(module._id)
 
     // alert ("SelectedModule is : " + selectedModule.toString())
-    //
 
     for (let item of selectedModule) {
         console.log(item)
@@ -68,58 +44,6 @@ function highlight ( module, modules ) {
         console.log(item)
 
     }
-
-
-
-    // let allModules = document.getElementsByClassName( "highlightModule");
-    // for (let i of allModules) {
-    //     console.log("Reset all i -- is :" + i );
-    //
-    // }
-
-
-
-    // // go through JSON objects, find the associated DOM element --> add 'active to class
-    // // else className should be "highlight" + m._id
-    // for (let m of selectedModule ) {
-    //     console.log(m.title);
-    //     console.log(m._id);
-    //     console.log(module._id);
-    //
-    //     if (m._id === module._id ){
-    //         console.log("TRUE");
-    //         let selectedM = document.getElementsByClassName(module._id);
-    //
-    //         selectedM.className += " active ";
-    //     }
-    // }
-
-    //
-    // for (let item of selectedModule) {
-    //
-    //     console.log(item)
-    //     item.className += " active";
-    //     console.log(item)
-    //
-    //
-    //     // item.className = "highlightModule " + module._id;
-    //     // console.log(item)
-    // }
-
-
-
-
-    //
-    // console.log(module.className)
-    // module.className += "active";
-
-    // for (let mod of modules ) {
-    //     if (mod._id == module._id){
-    //         mod.className = "active";
-    //     }
-    //     console.log(mod)
-    // }
-
 }
 
 
