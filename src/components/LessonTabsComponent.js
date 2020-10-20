@@ -51,7 +51,7 @@ const LessonTabs = (
     }) =>
     <div className={"container-fluid"}>
 
-        <h5> Lessons : </h5>
+        <h5 className={" wbdv-editor-component-header "}> Lessons : </h5>
 
 
         <div className={"row"}>
@@ -111,9 +111,11 @@ const LessonTabs = (
             </ul>
 
             {/*  Create */}
-            <button onClick={() => createLessonForModule(moduleId)}>
+
+            <button className={"wbdv-editor-plus-btn"} onClick={() => createLessonForModule(moduleId) }>
                 <i className="fa fa-plus fa-2x pull-right"></i>
             </button>
+
         </div>
     </div>
 

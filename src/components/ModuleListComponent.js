@@ -4,7 +4,7 @@ import moduleService from "../services/ModuleService"
 import {Link} from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-
+import './style.CourseEditor.css'
 import {Row, Col, Nav, } from "react-bootstrap"
 
 // ModuleListComponent -- A stateless class component that can dynamically render the
@@ -63,16 +63,16 @@ const ModuleListComponent = (
       {/*<button className={"wbdv-go-back-btn"}  onClick={()=> goBack()}>Go Back</button>*/}
 
     <h3>Modules for Selected Course: </h3>
-      <h5> {course.title}  </h5>
+      <h5 className={"wbdv-editor-component-header"} > {course.title}  </h5>
 
 
       <nav className={"navbar bg-light"}>
-      <ul  className={"navbar-nav "}>
+      <ul  className={"navbar-nav width-module-navbar-width"}>
       {
         modules.map(module =>
                         <div  className={"highlightModule "+ module._id} onClick={()=> highlight(module, modules)}>
 
-                        <li key={module._id} keyProp={module._id}  className={"nav-item "}>
+                        <li key={module._id} keyProp={module._id}  className={"nav-item wbdv-editor-highlight"}>
 
             {
               !module.editing &&

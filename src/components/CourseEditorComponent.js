@@ -11,7 +11,7 @@ import LessonTabs from "./LessonTabsComponent";
 import topicService from "../services/TopicService"
 import TopicPillComponent from "./TopicPillComponent";
 import TopicPills from "./TopicPillComponent";
-import "./style.topicPill.css"
+import "./style.CourseEditor.css"
 import {Tab} from "react-tabs";
 import {Nav, Row} from "react-bootstrap";
 
@@ -77,7 +77,7 @@ class CourseEditorComponent extends React.Component {
     return(
       <div>
 
-          <div className={"row"}>
+          <div className={"row wbdv-editor-header"}>
               <button className={"wbdv-go-back-btn"}  onClick={()=> goBack()}>
                   <i className="fa fa-times fa-2x"></i>
               </button>
@@ -87,7 +87,7 @@ class CourseEditorComponent extends React.Component {
           </div>
 
         <div className="row">
-          <div className="col-4">
+          <div className="col-4 wbdv-module-container">
             <ModuleListComponent/>
           </div>
           <div className="col-8">

@@ -43,7 +43,7 @@ const TopicPills = ({
 }) =>
     <div className={"container-fluid"}>
 
-        <h5> Topics :   </h5>
+        <h5 className={"wbdv-editor-component-header"}> Topics :   </h5>
 
         <div className={"row"}>
 
@@ -54,7 +54,7 @@ const TopicPills = ({
                                    <div  className={"highlightModule "+ topic._id} onClick={()=> highlight(topic, topics)}>
 
 
-                                  
+
                         <li key={topic._id} className={"nav-item wbdv-editor-highlight"}>
 
                             {/* Conditional styling --  'topic.editing ? "active" : ""
@@ -109,8 +109,8 @@ const TopicPills = ({
                 }
             </ul>
         {/* Create */}
-        <button onClick={()=> createTopicForLesson(lessonId)}>
-            <i className="fa fa-plus fa-2x"></i>
+        <button className={"wbdv-editor-plus-btn"} onClick={()=> createTopicForLesson(lessonId)}>
+            <i className="fa fa-plus fa-2x pull-right"></i>
         </button>
         </div>
 

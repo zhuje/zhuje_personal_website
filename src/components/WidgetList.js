@@ -15,7 +15,7 @@ const WidgetList = ({
   editWidget,
   okWidget}) =>
   <div>
-    <h1> Widgets </h1>
+    <h5 className={"wbdv-editor-component-header"}> Widgets </h5>
     <ul>
       {
         widgets.map(widget =>
