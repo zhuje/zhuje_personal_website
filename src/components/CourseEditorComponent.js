@@ -14,6 +14,7 @@ import TopicPills from "./TopicPillComponent";
 import "./style.CourseEditor.css"
 import {Tab} from "react-tabs";
 import {Nav, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 // Clicking 'X' on the screen will allow you to go back to the previous route
 function goBack() {
