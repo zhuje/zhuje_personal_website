@@ -35,7 +35,8 @@ export class CourseManagerComponent extends React.Component {
             path={[
                 "/edit/:courseId",
                 "/edit/:courseId/modules/:moduleId",
-                "/edit/:courseId/modules/:moduleId/lessons/:lessonId"
+                "/edit/:courseId/modules/:moduleId/lessons/:lessonId",
+                "/edit/:courseId/modules/:moduleId/lessons/:lessonId/topics/:topicId"
             ]}
             exact
             component={CourseEditorComponent}/>

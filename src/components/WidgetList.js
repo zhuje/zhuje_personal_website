@@ -41,6 +41,7 @@ const WidgetList = ({
               !widget.editing &&
                 <span>
                   {widget.name}
+                  {widget.type}
                   <button onClick={() => editWidget(widget)}>
                     Edit
                   </button>

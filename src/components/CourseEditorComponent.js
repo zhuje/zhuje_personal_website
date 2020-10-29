@@ -15,6 +15,7 @@ import "./style.CourseEditor.css"
 import {Tab} from "react-tabs";
 import {Nav, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import widgetService from "../services/WidgetService";
 
 // Clicking 'X' on the screen will allow you to go back to the previous route
 function goBack() {
@@ -33,7 +34,7 @@ class CourseEditorComponent extends React.Component {
     const lessonId = this.props.match.params.lessonId;
 
     // * A5
-    const topicId = this.props.match.params.topicId
+    const topicId = this.props.match.params.topicId;
 
 
       // fetch the JSON object for the course -- then fetch the module JSON objects associated
@@ -79,6 +80,7 @@ class CourseEditorComponent extends React.Component {
     }
 
     // *  A5
+      const topicId = this.props.match.params.topicId;
       if(topicId) {
           this.props.findWidgetsForTopic(topicId)
       }

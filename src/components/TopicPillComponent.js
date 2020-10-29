@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import topicService from "../services/TopicService";
+import {Link} from "react-router-dom";
 
 function highlight ( topic, topics ) {
     let allModule = document.getElementsByClassName("highlightModule");
@@ -35,6 +36,11 @@ function highlight ( topic, topics ) {
 // Extract the parameter 'topics' from
 // the stateToPropertyMapper
 const TopicPills = ({
+                        // State that is passed from 'connect' (below). 'Connect's Reducer state to this component.
+                        course = {},
+                        moduleId,
+
+
                         lessonId,
                         topics=[],
                         createTopicForLesson,
@@ -69,7 +75,11 @@ const TopicPills = ({
                                   !topic.editing &&
                                     <span>
 
-                                        {topic.title}
+                                        <Link
+                                            to={`/edit/${course._id}/modules/${moduleId}/lessons/${lessonId}/topics/${topic._id}`}  >
+                                          {topic.title}
+                                        </Link>
+
 
                                         <button onClick={() =>
                                             updateTopic({...topic, editing: true})
@@ -120,8 +130,11 @@ const TopicPills = ({
 // Fetch the 'topics' param for 'const TopicPills = ({topics}) =>
 // Do this by getting the state from the reducer (REDUX!)
 const stateToPropertyMapper = (state) => ({
+    course: state.courseReducer.course,
+    moduleId: state.lessonReducer.moduleId,
+    lessonId: state.topicReducer.lessonId,
     topics: state.topicReducer.topics,
-    lessonId: state.topicReducer.lessonId
+
 })
 
 const dispatchToPropertyMapper = (dispatch) => ({
