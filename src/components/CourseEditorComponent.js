@@ -32,6 +32,9 @@ class CourseEditorComponent extends React.Component {
     const moduleId = this.props.match.params.moduleId;
     const lessonId = this.props.match.params.lessonId;
 
+    // * A5
+    const topicId = this.props.match.params.topicId
+
 
       // fetch the JSON object for the course -- then fetch the module JSON objects associated
       // with the course
@@ -47,6 +50,11 @@ class CourseEditorComponent extends React.Component {
     if(lessonId){
       this.props.findTopicsForLesson(lessonId)
     }
+
+    //  * A5
+      if(topicId) {
+          this.props.findWidgetsForTopic(topicId)
+      }
 
   }
 
@@ -69,6 +77,11 @@ class CourseEditorComponent extends React.Component {
     if (lessonId !== prevProps.match.params.lessonId) {
         this.props.findTopicsForLesson(lessonId)
     }
+
+    // *  A5
+      if(topicId) {
+          this.props.findWidgetsForTopic(topicId)
+      }
 
   }
 
@@ -133,7 +146,16 @@ const propertyToDispatchMapper = (dispatch) => ({
                 type: "FIND_TOPICS_FOR_LESSON",
                 topics,
                 lessonId
-            }))
+            })),
+    // + A5
+    findWidgetsForTopic: (topicId) =>
+        widgetService.findWidgetsForTopic(topicId)
+            .then(widgets => dispatch({
+                  type: "FIND_WIDGETS_FOR_TOPIC",
+                  widgets
+            })),
+
+
 })
 
 export default connect
