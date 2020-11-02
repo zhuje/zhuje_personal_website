@@ -12,7 +12,7 @@ import {
 const WidgetList = ({
 
   widgets=[],
-    topicId={},
+    topicId,
 
   deleteWidget,
   createWidgetForTopic,
@@ -27,7 +27,7 @@ const WidgetList = ({
     <ul>
       {
         widgets.map(widget =>
-          <li>
+          <li key={widget.id}>
             {JSON.stringify(widget)}
             {/*{alert(JSON.stringify(topicId))}*/}
             <button
@@ -37,11 +37,12 @@ const WidgetList = ({
             {
               widget.editing &&
               <span><input
-                onChange={(event) => updateWidget({
+                onChange={ (event) => updateWidget({
                   ...widget,
                   name: event.target.value
                 })}
                 value={widget.name}/>
+
                 <button onClick={() => okWidget(widget)}>
                   Ok
                 </button>
@@ -65,7 +66,7 @@ const WidgetList = ({
 
       }
     </ul>
-    <button onClick={() => createWidgetForTopic(topicId)}> Create </button>
+    <button onClick={() => createWidgetForTopic(topicId)} > Create </button>
 
   </div>
 

@@ -14,13 +14,22 @@ const findWidgetsForTopic = (topicId) =>
 const createWidgetForTopic = (topicId) =>
   fetch(`${TOPIC_URL}/${topicId}/widgets`, {
     method: "POST",
-    body: JSON.stringify({name: "NEW HEADING", type: "HEADING"}),
+    body: JSON.stringify({name: "NEW HEADING Pizza ", type: "HEADING"}),
       headers: {
           "content-type": "application/json"
       }
   })
     .then(response => response.json())
 
+
+export const deleteWidget = (widget) =>
+    fetch(`${WIDGET_URL}/${widget.id}`,{
+        method: "DELETE"
+    }).then(response => response.json())
+
+
+
+
 export default {
-  findAllWidgets, createWidgetForTopic, findWidgetsForTopic
+  findAllWidgets, createWidgetForTopic, findWidgetsForTopic, deleteWidget
 }
