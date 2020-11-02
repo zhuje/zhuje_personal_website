@@ -1,12 +1,12 @@
 import {DELETE_WIDGET, CREATE_WIDGET, UPDATE_WIDGET} from "../actions/widgetActions"
 
-const initialState = {
-  widgets: [],
-  topicId: {}
-}
+// const initialState = {
+//   widgets: [],
+//   topicId: {}
+// }
 
-const widgetReducer = (state = initialState, action) => {
-  switch (action.type) {
+const widgetReducer = (state = {}, action) => {
+    switch (action.type) {
     case "FIND_WIDGETS_FOR_TOPIC":
       return {
         ...state,
@@ -23,14 +23,16 @@ const widgetReducer = (state = initialState, action) => {
         widgets: [...state.widgets, action.widget],
         topicId: action.topicId
       }
-    case UPDATE_WIDGET:
+      case UPDATE_WIDGET:
       return {
+        ...state,
         widgets: state.widgets.map(
           widget => widget._id === action.widget._id ?
             action.widget : widget)
       }
     case DELETE_WIDGET:
       return {
+        ...state,
         widgets: state.widgets.filter(widget => widget !== action.widget)
       }
     default:

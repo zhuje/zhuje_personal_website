@@ -12,7 +12,7 @@ import {
 const WidgetList = ({
 
   widgets=[],
-    topicId={},
+                      topicId={},
 
   deleteWidget,
   createWidgetForTopic,
@@ -23,14 +23,15 @@ const WidgetList = ({
 
 }) =>
   <div>
+
     <h5 className={"wbdv-editor-component-header"}> Widgets </h5>
     <ul>
       {
         widgets.map(widget =>
           <li key={widget.id}>
             {JSON.stringify(widget)}
-            {/*{alert(JSON.stringify(topicId))}*/}
-            <button
+            {alert(JSON.stringify(topicId))}
+            <button type="button" class="btn btn-danger"
               onClick={() => deleteWidget(widget)}>
               Delete
             </button>
@@ -53,7 +54,7 @@ const WidgetList = ({
                 <span>
                   {widget.name}
                   {widget.type}
-                  <button onClick={() => editWidget(widget)}>
+                  <button type="button" class="btn btn-danger" onClick={() => editWidget(widget)}>
                     Edit
                   </button>
                 </span>
@@ -66,7 +67,7 @@ const WidgetList = ({
 
       }
     </ul>
-    <button onClick={() => createWidgetForTopic(topicId)} > Create </button>
+    <button type="button" class="btn btn-primary" onClick={() => createWidgetForTopic(topicId)} > Create </button>
 
   </div>
 
