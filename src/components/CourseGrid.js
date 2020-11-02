@@ -63,6 +63,13 @@ export default class CourseGrid extends React.Component {
 
   };
 
+  /*
+        + addCourse ()  -- Creates a 'newCourse' object then
+        passes this 'newCourse' object to the server by the
+        function 'createCourse(newCourse)'. Once the
+        server responds with a JSON object -- update the
+        local state with the syntax '.then(...' .
+   */
   addCourse = () => {
     // creating a new table data row
     const newCourse = {
@@ -70,7 +77,6 @@ export default class CourseGrid extends React.Component {
       owner: "me",
       modified: (new Date()).toDateString() // Date returns as an object so you can't print an object -- you have to stringify it
     };
-
     // calling the remote server here.
     // .THEN updating the local state variable 'courses'
     // this.setState -- will recognize that the 'courses' have been updated and re-render the component\
@@ -83,6 +89,7 @@ export default class CourseGrid extends React.Component {
           ]
         })))
   };
+
 
   // function calls changes the state -- to recognize that the selected course is being edited
   editCourse = (course) => {

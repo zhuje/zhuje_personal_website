@@ -54,6 +54,7 @@ class CourseEditorComponent extends React.Component {
 
     //  * A5
       if(topicId) {
+          {alert("Topic ID is : " + topicId)}
           this.props.findWidgetsForTopic(topicId)
       }
 
@@ -154,7 +155,8 @@ const propertyToDispatchMapper = (dispatch) => ({
         widgetService.findWidgetsForTopic(topicId)
             .then(widgets => dispatch({
                   type: "FIND_WIDGETS_FOR_TOPIC",
-                  widgets
+                  widgets,
+                  topicId: topicId
             })),
 
 
