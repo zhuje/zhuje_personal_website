@@ -12,7 +12,7 @@ import {
 const WidgetList = ({
 
   widgets=[],
-    topicId,
+    topicId={},
 
   deleteWidget,
   createWidgetForTopic,

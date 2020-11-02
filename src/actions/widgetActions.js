@@ -23,4 +23,5 @@ export const createWidgetForTopic = (dispatch,topicId) =>
         .then(widget => dispatch({
                                      type: CREATE_WIDGET,
                                      widget,
+                                        topicId: topicId
                                  }));

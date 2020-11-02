@@ -21,6 +21,7 @@ const widgetReducer = (state = initialState, action) => {
     case CREATE_WIDGET:
       return {
         widgets: [...state.widgets, action.widget],
+        topicId: action.topicId
       }
     case UPDATE_WIDGET:
       return {
