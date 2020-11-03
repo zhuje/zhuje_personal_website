@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../style.Widgets.css'
 
 const HeadingWidget = (
 
@@ -7,16 +7,31 @@ const HeadingWidget = (
         widget,
         updateWidget,
         okWidget,
+        deleteWidget,
     }) =>
 
     <div>
 
-        <h5> HeadingWidget Component, widget being passed  {JSON.stringify(widget)}  </h5>
+        {/*<h5> HeadingWidget Component, widget being passed  {JSON.stringify(widget)}  </h5>*/}
         {
             widget.editing &&
             <div>
 
-                <button type="button" className="btn btn-success" onClick={() => okWidget(widget)}>
+                <select onChange={ (event) => okWidget({
+                                                           ...widget,
+                                                           type: event.target.value
+                                                       })}
+                        value="widget type" name="userSelectedWidgetType" >
+                    <option value="Widget Type"> Widget Type </option>
+                    <option value="HEADING"> Heading </option>
+                    <option value="PARAGRAPH"> Paragraph </option>
+
+
+                </select>
+
+
+
+                <button type="button" className="btn btn-success pull-right" onClick={() => okWidget(widget)}>
                     Save
                 </button>
 
@@ -38,7 +53,7 @@ const HeadingWidget = (
                        onChange={ (event) =>
                            updateWidget({...widget, name: event.target.value })}/>
 
-                <h1> Preview Heading : </h1>
+                <h3> Preview Heading : </h3>
 
                 {/*
                     NOTE :: UPON fresh the widget.size becomes an Integer
@@ -103,6 +118,12 @@ const HeadingWidget = (
                     widget.size === "6" &&
                     <h6>{widget.text}</h6>
                 }
+
+
+                <button type="button" className="btn btn-danger pull-right"
+                        onClick={() => deleteWidget(widget)}>
+                    Delete
+                </button>
 
             </div>
         }

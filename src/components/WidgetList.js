@@ -2,8 +2,10 @@ import React from "react";
 import {connect} from "react-redux";
 import ToggleButton from "react-bootstrap";
 import ToggleSwitch from "./ToggleSwitch";
-import HeadingWidget from "./wigets/HeadingWidget";
-import ParagraphWidget from "./wigets/ParagraphWidget";
+import HeadingWidget from "./widgets/HeadingWidget";
+import ParagraphWidget from "./widgets/ParagraphWidget";
+import './style.Widgets.css'
+
 import {
 
   deleteWidget,
@@ -35,34 +37,37 @@ const WidgetList = ({
     <h5 className={"wbdv-editor-component-header"}> Widgets </h5>
 
       {/* TOGGLE BUTTON */}
-      <ToggleSwitch widgets={widgets}/>
+      {/*<ToggleSwitch widgets={widgets}/>*/}
 
-    <ul>
+    <div>
       {
         widgets.map(widget =>
-          <li key={widget.id}>
-            {JSON.stringify(widget)}
+          <div key={widget.id} className={"wbdv-widget-component"}>
+
+            {/* TESTING */}
+            {/*{JSON.stringify(widget)}*/}
             {/*{alert(JSON.stringify(topicId))}*/}
 
 
               {/* DropDown List */}
-              <select onChange={ (event) => okWidget({
-                                                             ...widget,
-                                                             type: event.target.value
-                                                         })}
-                      value="widget type" name="userSelectedWidgetType">
-                  <option value="Widget Type"> Widget Type </option>
-                  <option value="HEADING"> Heading </option>
-                  <option value="PARAGRAPH"> Paragraph </option>
+              {/*<select onChange={ (event) => okWidget({*/}
+              {/*                                               ...widget,*/}
+              {/*                                               type: event.target.value*/}
+              {/*                                           })}*/}
+              {/*        value="widget type" name="userSelectedWidgetType">*/}
+              {/*    <option value="Widget Type"> Widget Type </option>*/}
+              {/*    <option value="HEADING"> Heading </option>*/}
+              {/*    <option value="PARAGRAPH"> Paragraph </option>*/}
 
 
-              </select>
+              {/*</select>*/}
 
             {/*  Delete Button */}
-            <button type="button" class="btn btn-danger"
-              onClick={() => deleteWidget(widget)}>
-              Delete
-            </button>
+            {/*<button type="button" class="btn btn-danger"*/}
+            {/*  onClick={() => deleteWidget(widget)}>*/}
+            {/*  Delete*/}
+            {/*</button>*/}
+
             {/*{*/}
             {/*  widget.editing &&*/}
             {/*  <span><input*/}
@@ -91,7 +96,7 @@ const WidgetList = ({
 
 
 
-              <button type="button" class="btn btn-warning" onClick={() => editWidget(widget)}>
+              <button type="button" class="btn btn-warning pull-right" onClick={() => editWidget(widget)}>
                           Edit
               </button>
               {/*<button type="button" class="btn btn-success" onClick={() => okWidget(widget)}>*/}
@@ -102,11 +107,21 @@ const WidgetList = ({
 
               {
                   widget.type === ("HEADING" ) &&
-                  <HeadingWidget widget={widget} updateWidget={updateWidget} okWidget={okWidget}/>
+                  <HeadingWidget
+                      widget={widget}
+                      updateWidget={updateWidget}
+                      okWidget={okWidget}
+                      deleteWidget={deleteWidget}
+                  />
               }
               {
                   widget.type === ("PARAGRAPH" ) &&
-                  <ParagraphWidget widget={widget} updateWidget={updateWidget} okWidget={okWidget}/>
+                  <ParagraphWidget
+                      widget={widget}
+                      updateWidget={updateWidget}
+                      okWidget={okWidget}
+                      deleteWidget={deleteWidget}
+                  />
               }
 
 
@@ -114,13 +129,13 @@ const WidgetList = ({
 
               {/*<h1> {widget.text} </h1>*/}
 
-          </li>
+          </div>
 
         )
 
 
       }
-    </ul>
+    </div>
 
     {/*  Create Button */}
     <button type="button" class="btn btn-primary"
