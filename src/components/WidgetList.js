@@ -126,6 +126,18 @@ const WidgetList = ({
     <button type="button" class="btn btn-primary"
             onClick={() => createWidgetForTopic(topicId)} > Create </button>
 
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
 
 // export default WidgetList

@@ -1,8 +1,6 @@
 import React from "react";
 
 
-
-
 const HeadingWidget = (
 
     {
@@ -21,14 +19,14 @@ const HeadingWidget = (
                 <button type="button" className="btn btn-success" onClick={() => okWidget(widget)}>
                     Save
                 </button>
-                <h3>Heading</h3>
 
-                <input  className="form-control" placeholder="Text" onChange={ (event) => updateWidget({
-                                                                                                           ...widget,
-                                                                                                           text: event.target.value })}/>
-                <select name={"headingSize"} className="form-control" onChange={ (event) => updateWidget({
-                                                                                        ...widget,
-                                                                                        size: event.target.value })}>
+                <h3>Heading</h3>
+                <input  className="form-control" placeholder="Text"
+                        onChange={ (event) =>
+                            updateWidget({...widget, text: event.target.value })}/>
+                <select name={"headingSize"} className="form-control"
+                        onChange={ (event) =>
+                            updateWidget({...widget, size: event.target.value })}>
                     <option value={"1"}>Heading 1</option>
                     <option value={"2"}>Heading 2</option>
                     <option value={"3"}>Heading 3</option>
@@ -36,9 +34,9 @@ const HeadingWidget = (
                     <option value={"5"}>Heading 5</option>
                     <option value={"6"}>Heading 6</option>
                 </select>
-                <input placeholder="Name" className="form-control" onChange={ (event) => updateWidget({
-                                                                                                          ...widget,
-                                                                                                          name: event.target.value })}/>
+                <input placeholder="Name" className="form-control"
+                       onChange={ (event) =>
+                           updateWidget({...widget, name: event.target.value })}/>
 
                 <h1> Preview Heading : </h1>
 
@@ -164,16 +162,9 @@ const HeadingWidget = (
                     <h6>{widget.text}</h6>
                 }
 
-
-
             </div>
 
         }
-
-
-
-
-
     </div>
 
 export default HeadingWidget
