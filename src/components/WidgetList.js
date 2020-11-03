@@ -106,7 +106,7 @@ const WidgetList = ({
               }
               {
                   widget.type === ("PARAGRAPH" ) &&
-                  <ParagraphWidget widget={widget}/>
+                  <ParagraphWidget widget={widget} updateWidget={updateWidget} okWidget={okWidget}/>
               }
 
 

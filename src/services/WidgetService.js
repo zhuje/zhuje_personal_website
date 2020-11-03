@@ -14,7 +14,7 @@ const findWidgetsForTopic = (topicId) =>
 const createWidgetForTopic = (topicId) =>
   fetch(`${TOPIC_URL}/${topicId}/widgets`, {
     method: "POST",
-    body: JSON.stringify({name: "NEW HEADING Pizza ", type: "HEADING"}),
+    body: JSON.stringify({name: "NEW HEADING ", type: "HEADING", text: "NEW TEXT", size: 1 }),
       headers: {
           "content-type": "application/json"
       }
