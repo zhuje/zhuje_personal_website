@@ -54,7 +54,7 @@ class CourseEditorComponent extends React.Component {
 
     //  * A5
       if(topicId) {
-          {alert("Did Mount, Topic ID is : " + topicId)}
+          // {alert("Did Mount, Topic ID is : " + topicId)}
           this.props.findWidgetsForTopic(topicId)
       }
 
@@ -82,7 +82,7 @@ class CourseEditorComponent extends React.Component {
 
     // *  A5
       const topicId = this.props.match.params.topicId;
-      {alert("Did Update, Topic ID is : " + topicId)}
+      // {alert("Did Update, Topic ID is : " + topicId)}
       if(topicId) {
           this.props.findWidgetsForTopic(topicId)
       }
