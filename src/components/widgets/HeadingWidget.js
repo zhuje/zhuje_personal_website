@@ -53,7 +53,7 @@ const HeadingWidget = (
                        onChange={ (event) =>
                            updateWidget({...widget, name: event.target.value })}/>
 
-                <h3> Preview Heading : </h3>
+                <h3> Preview  </h3>
 
                 {/*
                     NOTE :: UPON fresh the widget.size becomes an Integer

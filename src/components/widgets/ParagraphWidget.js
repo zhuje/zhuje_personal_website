@@ -30,7 +30,7 @@ const ParagraphWidget = (
             </button>
 
             <h3>Paragraph</h3>
-            <textarea placeholder={"Enter Text for your paragraph"} className="form-control"
+            <textarea value={widget.text} className="form-control"
                       onChange={ (event) =>
                           updateWidget({...widget, text: event.target.value })}></textarea>
             <input placeholder="Name" className="form-control"
