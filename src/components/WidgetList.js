@@ -5,16 +5,39 @@ import ToggleSwitch from "./ToggleSwitch";
 import HeadingWidget from "./widgets/HeadingWidget";
 import ParagraphWidget from "./widgets/ParagraphWidget";
 import './style.Widgets.css'
-
 import {
-
   deleteWidget,
   updateWidget,
   editWidget,
   okWidget,
-  createWidgetForTopic
+  createWidgetForTopic,
+  updateWidgetOrder
 } from "../actions/widgetActions";
 
+const UP = -1
+const DOWN = 1
+
+function handleMove (id, direction, widgets, updateWidgetOrder) {
+  // const {items} = this.state
+
+  // {alert("entered handleMove")}
+
+
+  const position = widgets.findIndex((i) => i.id === id)
+  if (position < 0) {
+    throw new Error("Given item not found.")
+  } else if (direction === UP && position === 0 || direction === DOWN && position === widgets.length - 1) {
+    return // canot move outside of array
+  }
+
+  const item = widgets[position] // save item for later
+  const newWidgets = widgets.filter((i) => i.id !== id) // remove item from array
+  newWidgets.splice(position + direction, 0, item) // puts item back into array into its new position
+
+  // this.setState({widgets: newWidgets})
+  updateWidgetOrder(newWidgets);
+
+}
 
 
 const WidgetList = ({
@@ -28,7 +51,8 @@ const WidgetList = ({
   createWidgetForTopic,
   updateWidget,
   editWidget,
-  okWidget
+  okWidget,
+  updateWidgetOrder
 
 
 }) =>
@@ -94,6 +118,8 @@ const WidgetList = ({
             {/*    </span>*/}
             {/*}*/}
 
+            <button className={"pull-right"} onClick={() => handleMove(widget.id, UP, widgets, updateWidgetOrder)}>&#x25B2;</button>
+            <button className={"pull-right"} onClick={() => handleMove(widget.id, DOWN, widgets, updateWidgetOrder)}>&#x25BC;</button>
 
 
               <button type="button" class="btn btn-warning pull-right" onClick={() => editWidget(widget)}>
@@ -168,7 +194,8 @@ const propertyToDispatchMapper = (dispatch) => ({
   createWidgetForTopic: (topicId) => createWidgetForTopic(dispatch, topicId),
   updateWidget: (widget) => updateWidget(dispatch, widget),
   editWidget: (widget) => editWidget(dispatch, widget),
-  okWidget: (widget) => okWidget(dispatch, widget)
+  okWidget: (widget) => okWidget(dispatch, widget),
+  updateWidgetOrder: (newWidgets) => updateWidgetOrder(dispatch, newWidgets)
 })
 
 export default connect

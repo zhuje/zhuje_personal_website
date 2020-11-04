@@ -29,3 +29,10 @@ export const createWidgetForTopic = (dispatch,topicId) =>
                                      widget,
                                         topicId: topicId
                                  }));
+
+export const updateWidgetOrder = (dispatch, newWidgets) =>
+    widgetService.updateWidgetOrder(newWidgets)
+        .then(responseNewWidgetOrder => dispatch({
+                                    type: "UPDATE_WIDGET_ORDER",
+                                     responseNewWidgetOrder
+                                   }));

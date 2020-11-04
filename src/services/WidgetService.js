@@ -37,8 +37,18 @@ export const updateWidget = (widgetId, newWidget) =>
     })
         .then(response => response.json())
 
+export const updateWidgetOrder = (newWidgets) =>
+    fetch(`${WIDGET_URL}`, {
+        method: "PUT",
+        body: JSON.stringify(newWidgets),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
+        .then(response => response.json())
+
 
 
 export default {
-  findAllWidgets, createWidgetForTopic, findWidgetsForTopic, deleteWidget,updateWidget
+  findAllWidgets, createWidgetForTopic, findWidgetsForTopic, deleteWidget,updateWidget, updateWidgetOrder
 }

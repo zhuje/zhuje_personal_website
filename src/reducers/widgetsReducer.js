@@ -35,6 +35,11 @@ const widgetReducer = (state = {}, action) => {
         ...state,
         widgets: state.widgets.filter(widget => widget !== action.widget)
       }
+    case "UPDATE_WIDGET_ORDER":
+        return {
+            ...state,
+            widgets: action.responseNewWidgetOrder
+        }
     default:
       return state
   }
