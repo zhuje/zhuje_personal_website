@@ -6,3 +6,8 @@
     padding: 42px;
     border-radius: 5px;
 }
+
+.wdbv-list-preview{
+    white-space: pre-line;
+}
+

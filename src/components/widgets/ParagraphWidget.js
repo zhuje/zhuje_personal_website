@@ -20,6 +20,7 @@ const ParagraphWidget = (
                 <option value="Widget Type"> Widget Type </option>
                 <option value="HEADING"> Heading </option>
                 <option value="PARAGRAPH"> Paragraph </option>
+                <option value="LIST"> List </option>
 
 
             </select>
@@ -46,6 +47,9 @@ const ParagraphWidget = (
                     onClick={() => deleteWidget(widget)}>
                 Delete
             </button>
+
+
+
 
         </div>
     }

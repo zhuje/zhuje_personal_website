@@ -13,6 +13,7 @@ import {
   createWidgetForTopic,
   updateWidgetOrder
 } from "../actions/widgetActions";
+import ListWidgetComponent from "./widgets/ListWidgetComponent";
 
 const UP = -1
 const DOWN = 1
@@ -33,6 +34,8 @@ function handleMove (id, direction, widgets, updateWidgetOrder) {
   const item = widgets[position] // save item for later
   const newWidgets = widgets.filter((i) => i.id !== id) // remove item from array
   newWidgets.splice(position + direction, 0, item) // puts item back into array into its new position
+
+  {alert(JSON.stringify(newWidgets))}
 
   // this.setState({widgets: newWidgets})
   updateWidgetOrder(newWidgets);
@@ -149,6 +152,17 @@ const WidgetList = ({
                       deleteWidget={deleteWidget}
                   />
               }
+              {
+                widget.type === ("LIST" ) &&
+                <ListWidgetComponent
+                    widget={widget}
+                    updateWidget={updateWidget}
+                    okWidget={okWidget}
+                    deleteWidget={deleteWidget}
+                />
+
+              }
+
 
 
 

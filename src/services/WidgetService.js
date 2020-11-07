@@ -1,11 +1,11 @@
 // + A5 -- all
 
-// const WIDGET_URL = "http://localhost:8080/api/widgets"
-// const TOPIC_URL  = "http://localhost:8080/api/topics"
+const WIDGET_URL = "http://localhost:8080/api/widgets"
+const TOPIC_URL  = "http://localhost:8080/api/topics"
 
-const WIDGET_URL = "https://salty-oasis-03130.herokuapp.com/api/widgets"
-const TOPIC_URL  = "https://salty-oasis-03130.herokuapp.com/api/topics"
-
+// const WIDGET_URL = "https://salty-oasis-03130.herokuapp.com/api/widgets"
+// const TOPIC_URL  = "https://salty-oasis-03130.herokuapp.com/api/topics"
+//
 
 
 const findAllWidgets = () =>
@@ -30,7 +30,8 @@ const createWidgetForTopic = (topicId) =>
 export const deleteWidget = (widget) =>
     fetch(`${WIDGET_URL}/${widget.id}`,{
         method: "DELETE"
-    }).then(response => response.json())
+    })
+        // .then(response => response.json())
 
 export const updateWidget = (widgetId, newWidget) =>
     fetch(`${WIDGET_URL}/${widgetId}`, {
