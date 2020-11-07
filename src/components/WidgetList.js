@@ -14,6 +14,7 @@ import {
   updateWidgetOrder
 } from "../actions/widgetActions";
 import ListWidgetComponent from "./widgets/ListWidgetComponent";
+import ImageWidget from "./widgets/ImageWidget";
 
 const UP = -1
 const DOWN = 1
@@ -160,8 +161,16 @@ const WidgetList = ({
                     okWidget={okWidget}
                     deleteWidget={deleteWidget}
                 />
-
               }
+            {
+              widget.type === ("IMAGE" ) &&
+              <ImageWidget
+                  widget={widget}
+                  updateWidget={updateWidget}
+                  okWidget={okWidget}
+                  deleteWidget={deleteWidget}
+              />
+            }
 
 
 
