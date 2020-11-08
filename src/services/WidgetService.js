@@ -7,7 +7,7 @@
 // const WIDGET_URL = "https://salty-oasis-03130.herokuapp.com/api/widgets"
 // const TOPIC_URL  = "https://salty-oasis-03130.herokuapp.com/api/topics"
 
-// A6
+// A6 -- HEROKU JAVA SERVER WITH CLEARDB -- configured for MYSQL WORKBENCH
 const WIDGET_URL = "https://stormy-earth-30167.herokuapp.com/api/widgets"
 const TOPIC_URL  = "https://stormy-earth-30167.herokuapp.com/api/topics"
 
