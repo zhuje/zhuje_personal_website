@@ -32,7 +32,7 @@ const ParagraphWidget = (
             </button>
 
             <h3>Paragraph</h3>
-            <textarea value={widget.text} className="form-control"
+            <textarea placeholder={"​Image URL"} className="form-control"
                       onChange={ (event) =>
                           updateWidget({...widget, text: event.target.value })}></textarea>
             <input placeholder="Name" className="form-control"

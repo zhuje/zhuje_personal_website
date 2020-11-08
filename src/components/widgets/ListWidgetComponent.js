@@ -1,5 +1,6 @@
 import React from "react";
 import '../style.Widgets.css'
+import widgetTypeDropDownList from "./widgetTypeDropDownList";
 
 
 class ListWidgetComponent extends React.Component {
@@ -12,6 +13,8 @@ class ListWidgetComponent extends React.Component {
         return(
 
             <div>
+
+
                 {
              this.props.widget.editing &&
              <div>
@@ -28,19 +31,30 @@ class ListWidgetComponent extends React.Component {
 
                  </select>
 
-                 <button type="button" className="btn btn-success pull-right" onClick={() => this.props.okWidget(this.props.widget)}>
+                 <button type="button" className="btn btn-success pull-right" onClick={() => this.props.okWidget({...this.props.widget})}>
                      Save
                  </button>
 
                  <h3> List </h3>
-                 <textarea value={this.props.widget.text} className="form-control"
+                 <textarea placeholder={" ​Enter one list item per line​.\n"}  className="form-control" value={this.props.widget.text}
                            onChange={ (event) =>
                                this.props.updateWidget({...this.props.widget, text: event.target.value })}></textarea>
 
 
 
-                 <select onChange={ (event) =>
-                     this.setState( {listType: event.target.value })}
+                 {/*<select onChange={ (event) =>*/}
+                 {/*    this.setState( {listType: event.target.value })}*/}
+                 {/*        className={"form-control"}*/}
+                 {/*        value="list type"*/}
+                 {/*        name="userSelectedListType"*/}
+                 {/*>*/}
+                 {/*    <option value="">  Choose List Type  </option>*/}
+                 {/*    <option value="UL">  Unordered List  </option>*/}
+                 {/*    <option value="OL"> Ordered List  </option>*/}
+                 {/*</select>*/}
+                 {/*{JSON.stringify(this.props.widget)}*/}
+
+                 <select onChange={ (event) => this.props.updateWidget({...this.props.widget, value: event.target.value })}
                          className={"form-control"}
                          value="list type"
                          name="userSelectedListType"
@@ -58,7 +72,8 @@ class ListWidgetComponent extends React.Component {
                  <div>
                      <h3> Preview </h3>
                      {
-                         this.state.listType === ("UL") &&
+                         // this.state.listType === ("UL") &&
+                          this.props.widget.value === ("UL") &&
                          <ul>
                              {this.props.widget.text.split("\n").map((i, key) => {
                                  return <li key={key}>{i}</li>;
@@ -66,12 +81,21 @@ class ListWidgetComponent extends React.Component {
                          </ul>
                      }
                      {
-                         this.state.listType === ("OL") &&
+                         // this.state.listType === ("OL") &&
+                         this.props.widget.value === ("OL") &&
                          <ol>
                              {this.props.widget.text.split("\n").map((i, key) => {
                                  return <li key={key}>{i}</li>;
                              })}
                          </ol>
+                     }
+                     {
+                         this.props.widget.value === null &&
+                         <ul>
+                             {this.props.widget.text.split("\n").map((i, key) => {
+                                 return <li key={key}>{i}</li>;
+                             })}
+                         </ul>
                      }
                  </div>
 
@@ -88,7 +112,7 @@ class ListWidgetComponent extends React.Component {
              !this.props.widget.editing &&
              <div>
                  {
-                     this.state.listType === ("UL") &&
+                     this.props.widget.value === ("UL") &&
                      <ul>
                          {this.props.widget.text.split("\n").map((i, key) => {
                              return <li key={key}>{i}</li>;
@@ -96,13 +120,22 @@ class ListWidgetComponent extends React.Component {
                      </ul>
                  }
                  {
-                     this.state.listType === ("OL") &&
+                     this.props.widget.value === ("OL") &&
                      <ol>
                          {this.props.widget.text.split("\n").map((i, key) => {
                              return <li key={key}>{i}</li>;
                          })}
                      </ol>
                  }
+                 {
+                     this.props.widget.value === null &&
+                     <ul>
+                         {this.props.widget.text.split("\n").map((i, key) => {
+                             return <li key={key}>{i}</li>;
+                         })}
+                     </ul>
+                 }
+
              </div>
 
          }
