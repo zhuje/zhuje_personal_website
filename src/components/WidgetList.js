@@ -19,7 +19,7 @@ import ImageWidget from "./widgets/ImageWidget";
 const UP = -1
 const DOWN = 1
 
-function handleMove (id, direction, widgets, updateWidgetOrder) {
+function handleMove (id, direction, widgets, updateWidgetOrder, topicId) {
   // const {items} = this.state
 
   // {alert("entered handleMove")}
@@ -39,7 +39,7 @@ function handleMove (id, direction, widgets, updateWidgetOrder) {
   {alert(JSON.stringify(newWidgets))}
 
   // this.setState({widgets: newWidgets})
-  updateWidgetOrder(newWidgets);
+  updateWidgetOrder(newWidgets,topicId);
 
 }
 
@@ -77,62 +77,13 @@ const WidgetList = ({
             {/*{alert(JSON.stringify(topicId))}*/}
 
 
-              {/* DropDown List */}
-              {/*<select onChange={ (event) => okWidget({*/}
-              {/*                                               ...widget,*/}
-              {/*                                               type: event.target.value*/}
-              {/*                                           })}*/}
-              {/*        value="widget type" name="userSelectedWidgetType">*/}
-              {/*    <option value="Widget Type"> Widget Type </option>*/}
-              {/*    <option value="HEADING"> Heading </option>*/}
-              {/*    <option value="PARAGRAPH"> Paragraph </option>*/}
-
-
-              {/*</select>*/}
-
-            {/*  Delete Button */}
-            {/*<button type="button" class="btn btn-danger"*/}
-            {/*  onClick={() => deleteWidget(widget)}>*/}
-            {/*  Delete*/}
-            {/*</button>*/}
-
-            {/*{*/}
-            {/*  widget.editing &&*/}
-            {/*  <span><input*/}
-            {/*    onChange={ (event) => updateWidget({*/}
-            {/*      ...widget,*/}
-            {/*      name: event.target.value*/}
-            {/*    })}*/}
-            {/*    value={widget.name}/>*/}
-
-            {/*    <button onClick={() => okWidget(widget)}>*/}
-            {/*      Ok*/}
-            {/*    </button>*/}
-            {/*    </span>*/}
-            {/*}*/}
-            {/*{*/}
-            {/*  !widget.editing &&*/}
-            {/*    <span>*/}
-            {/*      {widget.name}*/}
-            {/*      /!*{widget.type}*!/*/}
-            {/*        */}
-            {/*      <button type="button" class="btn btn-danger" onClick={() => editWidget(widget)}>*/}
-            {/*        Edit*/}
-            {/*      </button>*/}
-            {/*    </span>*/}
-            {/*}*/}
-
-            <button className={"pull-right"} onClick={() => handleMove(widget.id, UP, widgets, updateWidgetOrder)}>&#x25B2;</button>
-            <button className={"pull-right"} onClick={() => handleMove(widget.id, DOWN, widgets, updateWidgetOrder)}>&#x25BC;</button>
+            <button className={"pull-right"} onClick={() => handleMove(widget.id, UP, widgets, updateWidgetOrder, topicId)}>&#x25B2;</button>
+            <button className={"pull-right"} onClick={() => handleMove(widget.id, DOWN, widgets, updateWidgetOrder, topicId)}>&#x25BC;</button>
 
 
               <button type="button" class="btn btn-warning pull-right" onClick={() => editWidget(widget)}>
                           Edit
               </button>
-              {/*<button type="button" class="btn btn-success" onClick={() => okWidget(widget)}>*/}
-              {/*  Save*/}
-              {/*</button>*/}
-
 
 
               {
@@ -171,36 +122,14 @@ const WidgetList = ({
                   deleteWidget={deleteWidget}
               />
             }
-
-
-
-
-
-              {/*<h1> {widget.text} </h1>*/}
-
           </div>
-
         )
-
-
       }
     </div>
 
     {/*  Create Button */}
     <button type="button" class="btn btn-primary"
             onClick={() => createWidgetForTopic(topicId)} > Create </button>
-
-
-
-
-
-
-
-
-
-
-
-
 
   </div>
 
@@ -218,7 +147,7 @@ const propertyToDispatchMapper = (dispatch) => ({
   updateWidget: (widget) => updateWidget(dispatch, widget),
   editWidget: (widget) => editWidget(dispatch, widget),
   okWidget: (widget) => okWidget(dispatch, widget),
-  updateWidgetOrder: (newWidgets) => updateWidgetOrder(dispatch, newWidgets)
+  updateWidgetOrder: (newWidgets, topicId) => updateWidgetOrder(dispatch, newWidgets, topicId)
 })
 
 export default connect

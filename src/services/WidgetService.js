@@ -43,8 +43,8 @@ export const updateWidget = (widgetId, newWidget) =>
     })
         .then(response => response.json())
 
-export const updateWidgetOrder = (newWidgets) =>
-    fetch(`${WIDGET_URL}`, {
+export const updateWidgetOrder = (newWidgets, topicId) =>
+    fetch(`${TOPIC_URL}/${topicId}/widgets`, {
         method: "PUT",
         body: JSON.stringify(newWidgets),
         headers: {

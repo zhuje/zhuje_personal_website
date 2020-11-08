@@ -30,8 +30,8 @@ export const createWidgetForTopic = (dispatch,topicId) =>
                                         topicId: topicId
                                  }));
 
-export const updateWidgetOrder = (dispatch, newWidgets) =>
-    widgetService.updateWidgetOrder(newWidgets)
+export const updateWidgetOrder = (dispatch, newWidgets, topicId) =>
+    widgetService.updateWidgetOrder(newWidgets, topicId)
         .then(responseNewWidgetOrder => dispatch({
                                     type: "UPDATE_WIDGET_ORDER",
                                      responseNewWidgetOrder
