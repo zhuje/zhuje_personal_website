@@ -1,11 +1,16 @@
 // + A5 -- all
 
-const WIDGET_URL = "http://localhost:8080/api/widgets"
-const TOPIC_URL  = "http://localhost:8080/api/topics"
+// const WIDGET_URL = "http://localhost:8080/api/widgets"
+// const TOPIC_URL  = "http://localhost:8080/api/topics"
 
+// A5
 // const WIDGET_URL = "https://salty-oasis-03130.herokuapp.com/api/widgets"
 // const TOPIC_URL  = "https://salty-oasis-03130.herokuapp.com/api/topics"
-//
+
+// A6
+const WIDGET_URL = "https://stormy-earth-30167.herokuapp.com/api/widgets"
+const TOPIC_URL  = "https://stormy-earth-30167.herokuapp.com/api/topics"
+
 
 
 const findAllWidgets = () =>
