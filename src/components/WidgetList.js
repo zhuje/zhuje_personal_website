@@ -36,7 +36,7 @@ function handleMove (id, direction, widgets, updateWidgetOrder, topicId) {
   const newWidgets = widgets.filter((i) => i.id !== id) // remove item from array
   newWidgets.splice(position + direction, 0, item) // puts item back into array into its new position
 
-  {alert(JSON.stringify(newWidgets))}
+  // {alert(JSON.stringify(newWidgets))}
 
   // this.setState({widgets: newWidgets})
   updateWidgetOrder(newWidgets,topicId);
