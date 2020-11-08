@@ -8,7 +8,6 @@ const widgetTypeDropDownList = (
         okWidget,
         deleteWidget,
     }) =>
-
             <div>
                 <h1> Hello World </h1>
                 <select onChange={(event) => okWidget({

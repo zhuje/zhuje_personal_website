@@ -1,5 +1,6 @@
 import React from "react";
-import widgetTypeDropDownList from "../widgetTypeDropDownList";
+import widgetTypeDropDownList from "./widgetTypeDropDownList";
+import '../style.Widgets.css'
 
 const ImageWidget = (
     {
@@ -29,14 +30,7 @@ const ImageWidget = (
                 </select>
 
 
-                    {/*<div>*/}
-                    {/*<widgetTypeDropDownList*/}
-                    {/*    widget={widget}*/}
-                    {/*    updateWidget={updateWidget}*/}
-                    {/*    okWidget={okWidget}*/}
-                    {/*    deleteWidget={deleteWidget}*/}
-                    {/*/>*/}
-                    {/*</div>*/}
+
 
 
                 <button type="button" className="btn btn-success pull-right" onClick={() => okWidget(widget)}>
@@ -51,9 +45,9 @@ const ImageWidget = (
                        onChange={ (event) =>
                            updateWidget({...widget, name: event.target.value })}/>
 
-                <div>
+                <div >
                     <h3> Preview </h3>
-                    <img className={"card-img-top"} src={widget.src} alt={"No Image Available"}/>
+                    <img className={"card-img-top wbdv-image-widget-preview"} src={widget.src} alt={"No Image Available"}/>
                 </div>
 
                 <button type="button" className="btn btn-danger pull-right"
@@ -69,9 +63,7 @@ const ImageWidget = (
         {
             !widget.editing &&
             <div>
-                {widget.text}
-
-
+                <img className={"card-img-top wbdv-image-widget-preview "} src={widget.src} alt={"No Image Available"}/>
             </div>
 
         }
