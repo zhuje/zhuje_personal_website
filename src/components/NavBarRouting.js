@@ -4,6 +4,7 @@ import '../style/style.navbar.css'
 import About from "./About"
 import Home from "./Home";
 import Resume from "./Resume";
+import Projects from "./Projects"
 
 export class NavBarRouting extends React.Component {
   state = {
@@ -31,7 +32,7 @@ export class NavBarRouting extends React.Component {
                 <Link className="nav-link jz_navBar_spacing" to="/resume"> Resume </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link jz_navBar_spacing" href="#"> Projects </a>
+                <Link className="nav-link jz_navBar_spacing" to="/projects"> Projects </Link>
               </li>
             </ul>
           </div>
@@ -40,6 +41,8 @@ export class NavBarRouting extends React.Component {
         <Route path="/home" exact component={Home}/>
         <Route path="/about" exact component={About}/>
         <Route path="/resume" exact component={Resume}/>
+        <Route path="/projects" exact component={Projects}/>
+
 
 
       </BrowserRouter>

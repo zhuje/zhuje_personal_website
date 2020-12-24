@@ -1,0 +1,8 @@
+.jz_about_img {
+    object-fit: contain
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
