@@ -1,10 +1,11 @@
 
 /*          Apply to all        */
 
-.active, .wbdv-editor-highlight:hover {
-    background-color: orange;
-    color: white;
-}
+/*.active, .wbdv-editor-highlight:hover {*/
+/*    background-color: orange;*/
+/*    color: white;*/
+/*    border-radius: 10px;*/
+/*}*/
 
 button {
     background-color: transparent;
