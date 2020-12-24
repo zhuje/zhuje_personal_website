@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "react-bootstrap/Image";
 import '../style/style.navbar.css'
 
 export default class About extends React.Component {
