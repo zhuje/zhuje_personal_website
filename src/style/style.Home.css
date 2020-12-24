@@ -1,8 +1,43 @@
 .jz_about_img {
-    object-fit: contain
+    object-fit: contain;
 }
 
 .img-fluid {
     width: 100%;
     height: auto;
+}
+
+
+
+/* TEST */
+
+/*div.transbox {*/
+/*    margin: 30px;*/
+/*    padding: 57px;*/
+/*    background-color: rgba(0,0,0,0.8);*/
+/*    opacity: 0.9;*/
+/*    color: white;*/
+
+/*}*/
+
+
+div.background {
+    /*background: url(https://www.readersdigest.ca/wp-content/uploads/2016/05/what-different-flowers-mean-scaled.jpg) repeat center;*/
+    background: url(https://drive.google.com/uc?export=view&id=1kO0MsMif0RB5t2gOUCON7Z1ze9KDmfPL) repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+#wrapper {
+    padding: 0px 0;
+    /*position: absolute;*/
+    color: black;
+    top: 88px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#content {
+    min-height: 100%;
 }

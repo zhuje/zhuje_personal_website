@@ -5,6 +5,7 @@ import About from "./About"
 import Home from "./Home";
 import Resume from "./Resume";
 import Projects from "./Projects"
+import Contact from "./Contact"
 
 export class NavBarRouting extends React.Component {
   state = {
@@ -34,6 +35,9 @@ export class NavBarRouting extends React.Component {
               <li className="nav-item">
                 <Link className="nav-link jz_navBar_spacing" to="/projects"> Projects </Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link jz_navBar_spacing" to="/contact"> Contact </Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -42,6 +46,7 @@ export class NavBarRouting extends React.Component {
         <Route path="/about" exact component={About}/>
         <Route path="/resume" exact component={Resume}/>
         <Route path="/projects" exact component={Projects}/>
+        <Route path="/contact" exact component={Contact}/>
 
 
 
