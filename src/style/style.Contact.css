@@ -1,5 +1,5 @@
 .jz_contact_transbox {
-    margin: 10px;
+    margin: 20px;
     padding: 57px;
     background-color: rgba(0,0,0,0.8);
     opacity: 0.9;
@@ -21,7 +21,7 @@
 
 .jz_contact_background {
     /*background: url(https://www.readersdigest.ca/wp-content/uploads/2016/05/what-different-flowers-mean-scaled.jpg) repeat center;*/
-    background: url(https://drive.google.com/uc?export=view&id=14sSN4MIjAHGROTBld6M164nqNyuD9rcV) repeat center;
+    background: url(https://drive.google.com/uc?export=view&id=1wfv8XmLLCFXoIm6n3hpObJe-7WCBO9Jw) repeat center;
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -38,3 +38,6 @@
     height: 100%
 }
 
+.jz_contact_link{
+    color: white;
+}
