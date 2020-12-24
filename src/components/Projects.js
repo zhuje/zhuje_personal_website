@@ -6,6 +6,7 @@ import '../style/style.Projects.css'
 export default class Projects extends React.Component {
     render() {
         return (
+            <div className={"jz_Projects_background"}>
             <div className="container-fluid jz_projects_container">
                 <h1 className="jz_projects_heading"> Projects </h1>
                 <br/>
@@ -27,7 +28,7 @@ export default class Projects extends React.Component {
                     <h5 className="jz_projects_heading"> Specifications  </h5>
                     <ul>
                         <li>
-                            <b> MEAN stack (MongoDB, Express, Angular, NodeJS) </b>
+                            <b> MEAN stack (MongoDB, Express, Angular, NodeJS) Full Stack </b>
                         </li>
                         <li>
                             <b> Single Page Application </b> implemented for smooth transitions
@@ -56,12 +57,12 @@ export default class Projects extends React.Component {
                     <ul>
                         <li>
                             <a href={"https://github.com/zhuje/cs5610_finalProject_angular_client"}>
-                            Client (Angular)
+                            Client (Angular) Frontend
                             </a>
                         </li>
                         <li>
                             <a href={"https://github.com/zhuje/cs5610_finalProject_nodeJS_server"}>
-                                Server (NodeJS)
+                                Server (NodeJS) Backend
                             </a>
                         </li>
                         <li>
@@ -69,9 +70,44 @@ export default class Projects extends React.Component {
                             Deployed on Heroku, MongoDB Atlas used a cloud-based database
                         </li>
                     </ul>
+                    <br/><br/>
 
+                    {/*  Personal Website    */}
+                    <a href={"/home"}>
+                        <h2 className="jz_projects_heading"> This Personal Website </h2>
+                    </a>
+                    <Image
+                        className="jz_about_img"
+                        src="https://drive.google.com/uc?export=view&id=1TDRmzCcqbXnvtek-IbEuhFhJ8R2DBmVJ"
+                        fluid >
+                    </Image>
+                    <br/><br/>
+                    <h5 className="jz_projects_heading"> Description </h5>
+                    <p>  Jenny Zhu's Personal Website  </p>
+                    <h5 className="jz_projects_heading"> Specifications </h5>
+                    <ul>
+                        <li>
+                            React
+                        </li>
+                        <li>
+                            React Routing
+                        </li>
+                        <li>
+                            Responsive to Viewport Resizing
+                        </li>
+                    </ul>
+                    <h5 className="jz_projects_heading"> GitHub </h5>
+                    <ul>
+                        <li>
+                            <a href={"https://github.com/zhuje/zhuje_personal_website"}>
+                                React Frontend
+                            </a>
+                        </li>
+                    </ul>
 
                 </div>
+            </div>
+
             </div>
 
         )

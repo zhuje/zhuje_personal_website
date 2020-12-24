@@ -12,3 +12,11 @@
 .jz_projects_heading, li{
     font-weight: 100;
 }
+
+.jz_Projects_background {
+    /*background: url(https://drive.google.com/uc?export=view&id=1wfv8XmLLCFXoIm6n3hpObJe-7WCBO9Jw) repeat center;*/
+    background-color: #f8f9fa!important;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
