@@ -6,15 +6,25 @@ import '../style/style.Projects.css'
 export default class Projects extends React.Component {
     render() {
         return (
-            <div className={"jz_Projects_background"}>
+            <div>
+
+
+                <div className="container-fluid jz_projects_title_container ">
+                    <h1 className="jz_projects_title"> Projects </h1>
+                    <a href={"https://github.com/zhuje"} className="lead jz_projects_text_color">
+                        GitHub
+                    </a>
+                </div>
+
+
             <div className="container-fluid jz_projects_container">
-                <h1 className="jz_projects_heading"> Projects </h1>
-                <br/>
+
 
                 {/*  MovieMatch   */}
                 <div className="jz_projects_project-container">
+
                     <a href={"http://movie-match-angular.herokuapp.com/"}>
-                        <h2 className="jz_projects_heading">   MovieMatch </h2>
+                        <h1 className="jz_projects_subtitles">   MovieMatch </h1>
                     </a>
                     <Image
                         className="jz_about_img"
@@ -70,11 +80,11 @@ export default class Projects extends React.Component {
                             Deployed on Heroku, MongoDB Atlas used a cloud-based database
                         </li>
                     </ul>
-                    <br/><br/>
+                    <br/><br/><br/>
 
                     {/*  Personal Website    */}
                     <a href={"/home"}>
-                        <h2 className="jz_projects_heading"> This Personal Website </h2>
+                        <h1 className="jz_projects_subtitles "> Personal Website </h1>
                     </a>
                     <Image
                         className="jz_about_img"
@@ -87,7 +97,7 @@ export default class Projects extends React.Component {
                     <h5 className="jz_projects_heading"> Specifications </h5>
                     <ul>
                         <li>
-                            React
+                            <b> React </b>
                         </li>
                         <li>
                             React Routing

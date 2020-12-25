@@ -1,12 +1,13 @@
 
 .jz_projects_container {
-    margin-top: 25px;
-    padding: 57px;
-    background-color: rgba(0,0,0,0.8);
+    padding: 15px;
+    /*background-color: rgba(0,0,0,0.8);*/
     opacity: 0.9;
-    color: white;
+    color: black;
     width: 75%;
     align-self: center;
+    border-radius:5px;
+
 }
 
 .jz_projects_heading, li{
@@ -15,8 +16,38 @@
 
 .jz_Projects_background {
     /*background: url(https://drive.google.com/uc?export=view&id=1wfv8XmLLCFXoIm6n3hpObJe-7WCBO9Jw) repeat center;*/
-    background-color: #f8f9fa!important;
+    /*background-color: #f8f9fa!important;*/
+    background-color: darkseagreen;
     background-size: cover;
     position: relative;
     overflow: hidden;
+
+}
+
+img {
+    border-radius: 10px;
+}
+
+.jz_projects_title{
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+.jz_projects_subtitles {
+    font-weight: 100;
+    text-align: center;
+}
+
+.jz_projects_title_container {
+    padding: 30px;
+    /*background-color: rgba(0,0,0,0.8);*/
+    opacity: 0.8;
+    color: black;
+    width: 75%;
+    align-self: center;
+    border-radius: 5px;
+}
+
+.jz_projects_text_color{
+    color: black
 }
