@@ -1,14 +1,30 @@
 .jz_resume_heading{
     font-weight: 100;
+    font-size: 3.5rem;
 }
 
 .jz_resume_container {
     margin-top: 25px;
     padding: 57px;
-    background-color: darkseagreen;
+    background-color: white;
     /*background-color: rgba(0,0,0,0.8);*/
     opacity: 0.8;
-    color: white;
+    color: black;
     width: 75%;
     align-self: center;
+}
+
+.jz_resume_container_body {
+    padding: 50px;
+    /*background-color: rgba(0,0,0,0.8);*/
+    /*opacity: 0.8;*/
+    color: black;
+    width: 75%;
+    align-self: center;
+    font-weight: 100;
+    display: flex;
+}
+
+.jz_resume_img{
+    width: 100%;
 }
