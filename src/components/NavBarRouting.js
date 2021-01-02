@@ -18,11 +18,10 @@ export class NavBarRouting extends React.Component {
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-2 jz_navbar_col2" >
-
                         </div>
                         <div className="col-12 col-lg-10 jz_navbar_col10">
                             <nav className=" navbar navbar-expand-lg navbar-light bg-light">
-                                <Link className="navbar-brand jz_navBar_nudge " to="/about"> Jenny
+                                <Link className="navbar-brand jz_navBar_nudge " to="/"> Jenny
                                     Zhu </Link>
                                 <button className="navbar-toggler" type="button"
                                         data-toggle="collapse"
@@ -58,7 +57,7 @@ export class NavBarRouting extends React.Component {
                     </div>
                 </div>
 
-                <Route path="/home" exact component={Home}/>
+                <Route path="/" exact component={About}/>
                 <Route path="/about" exact component={About}/>
                 <Route path="/resume" exact component={Resume}/>
                 <Route path="/projects" exact component={Projects}/>
