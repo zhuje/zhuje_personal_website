@@ -21,7 +21,8 @@
 
 .jz_contact_background {
     /*background: url(https://www.readersdigest.ca/wp-content/uploads/2016/05/what-different-flowers-mean-scaled.jpg) repeat center;*/
-    background: url(https://drive.google.com/uc?export=view&id=1wfv8XmLLCFXoIm6n3hpObJe-7WCBO9Jw) repeat center;
+    /*background: url(https://drive.google.com/uc?export=view&id=1wfv8XmLLCFXoIm6n3hpObJe-7WCBO9Jw) repeat center;*/
+    background-color: saddlebrown;
     background-size: cover;
     position: relative;
     overflow: hidden;

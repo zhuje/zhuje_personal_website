@@ -7,84 +7,128 @@ export default class Resume extends React.Component {
     render() {
         return (
             <div>
-
-                {/*    Resume Heading    */}
-                <div className="container-fluid jz_resume_container">
-                    <h1 className="jz_resume_heading"> Resume </h1>
-                    <a href={"https://drive.google.com/file/d/1W2GFuJBmr3chIpeBqh_Nq-C05gYe9ufN/view?usp=sharing"}
-                       style={{color: "black"}}>
-                        PDF Version
-                    </a>
-                </div>
-
-                {/*     Education   */}
-                <div className="container-fluid jz_resume_container_body ">
+                <br/>
+                <div className="container-fluid  ">
                     <div className="row">
-                        <div className="col-12 col-md-6">
 
-                            <img
-                                src={"https://hughesmarino.com/wp-content/uploads/northeastern-university-seattle-headquarters-reception-area-spaces-we-love-hughes-marino.jpg"}
-                                alt={"Northeastern University Image"} className="jz_resume_img"/>
-                            <p style={{color: "grey"}}><i>Credit: hughesmarino.com </i></p>
+                        {/* GRID SPACING */}
+                        <div className="col-lg-2">
                         </div>
 
-                        <div className="col-12 col-md-6">
-                            <h1> Education </h1>
-                            <h3>Master of Science in Computer Science </h3>
-                            <h5>Northeastern </h5>
-                            Boston, MA <br/>
-                            Expected Graduation May 2022 <br/>
-                            <b> GPA : </b> 3.85/4.0 <br/>
-                            <b> Related Coursework: </b>
-                            Web Development, Foundations of Software Engineering,
-                            Object-Oriented Design, Algorithms, Computer Systems, Discrete Math and
-                            Data Structures, Human Computer Interactions, Human-Center Machine
-                            Learning
-
-                            <br/><br/>
-
-                            <h3> Bachelor of Science in Biology, <br/> Minor in Psychology </h3>
-                            <h5> Northeastern </h5>
-                            Boston, MA <br/>
-                            2010 - 2014 <br/>
-                            <b> GPA : </b> 3.4/4.0 <br/>
-                            <b> Awards : </b>
-                            Joe Martin Scholarship for Bank of America,
-                            Northeastern Undergraduate Research Grant for an Independent
-                            Study in Stem Cell Markers for Neural Plasticity <br/>
-                            <b> Publications: </b>
-                            Sîrbulescu, R.F., Ilieş, I., Vitalo, A.G., Trull, K., <b> Zhu, J., </b>
-                            Traniello, I.M., Zupanc, G.K.H.: Adult stem cells in
-                            the knifefish cerebellum. &nbsp;
-                            <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/dneu.22210">
-                                Developmental Neurobiology 75, 39-65 (2015),
-                                doi:10.1002/dneu.22210
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                {/*    Projects     */}
-                <div>
-                    <div className="container-fluid jz_resume_container_body ">
-                        <div className="row">
-                            <div className="col-12 col-md-6">
-                                <img
-                                    src="https://drive.google.com/uc?export=view&id=13Iq4x7vl0M9a42b_kk_etoX_KeUNENjE"
-                                    alt={"Code Image"} className="jz_resume_img"/>
+                        {/* BODY */}
+                        <div className="col-12 col-lg-8">
+                            {/*    RESUME HEADING    */}
+                            <div className="container-fluid ">
+                                <h1 className="jz_resume_heading"> Resume </h1>
+                                <a href={"https://drive.google.com/file/d/1W2GFuJBmr3chIpeBqh_Nq-C05gYe9ufN/view?usp=sharing"}
+                                   style={{color: "black"}}>
+                                    PDF Version
+                                </a>
                             </div>
-                            <div className="col-12 col-md-6">
-                                <Link to={"/projects"}><h1 style={{color: "black"}}> Projects </h1>
+                            <br/>
+
+                            {/*     EDUCATION   */}
+                            <div className="container-fluid">
+                                <h1 className="jz_resume_subheading"> Education </h1>
+                            </div>
+
+                            <div class="container-fluid" style={{margin: '20px'}}>
+                                <h3 className="jz_resume_subheading">Master of Science in Computer
+                                    Science </h3>
+                                <h5 className="jz_resume_subheading">Northeastern </h5>
+                                Boston, MA <br/>
+                                Expected Graduation May 2022 <br/>
+                                <b> GPA : </b> 3.85/4.0 <br/>
+                                <b> Related Coursework: </b>
+                                Web Development, Foundations of Software Engineering,
+                                Object-Oriented Design, Algorithms, Computer Systems, Discrete Math
+                                and
+                                Data Structures, Human Computer Interactions, Human-Center Machine
+                                Learning
+
+                                <br/><br/>
+
+                                <h3 className="jz_resume_subheading"> Bachelor of Science in
+                                    Biology,
+                                    <br/> Minor in Psychology </h3>
+                                <h5 className="jz_resume_subheading"> Northeastern </h5>
+                                Boston, MA <br/>
+                                2010 - 2014 <br/>
+                                <b> GPA : </b> 3.4/4.0 <br/>
+                                <b> Awards : </b>
+                                Joe Martin Scholarship for Bank of America,
+                                Northeastern Undergraduate Research Grant for an Independent
+                                Study in Stem Cell Markers for Neural Plasticity <br/>
+                                <b> Publications: </b>
+                                Sîrbulescu, R.F., Ilieş, I., Vitalo, A.G., Trull, K., <b> Zhu,
+                                J., </b>
+                                Traniello, I.M., Zupanc, G.K.H.: Adult stem cells in
+                                the knifefish cerebellum. &nbsp;
+                                <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/dneu.22210">
+                                    Developmental Neurobiology 75, 39-65 (2015),
+                                    doi:10.1002/dneu.22210
+                                </a>
+                            </div>
+
+                            {/*     TECHNICAL KNOWLEDGE     */}
+                            <div>
+                                <h1 className="jz_resume_subheading"> Technical Knowledge </h1>
+                            </div>
+                            <div className="container-fluid" style={{margin: '20px'}}>
+                                <h3 className="jz_resume_subheading"> Languages </h3>
+                                Java, Python, C++, C, Javascript, Typescript, HTML, CSS
+                                <h3 className="jz_resume_subheading"> Operating Systems </h3>
+                                Linux, MacOS
+                            </div>
+
+
+                            {/*    PROJECTS     */}
+                            <div className="container-fluid">
+                                <Link to={"/projects"}>
+                                    <h1 style={{color: "black"}} className="jz_resume_subheading">
+                                        Projects </h1>
                                 </Link>
-                                <p> Click the <i> Projects </i> heading above to navigate to the
-                                    Projects page.
-                                </p>
+                            </div>
+                            <div className="container-fluid">
+                                <h6 style={{margin: '20px'}}>
+                                    Navigate to the
+                                    <Link to={"/projects"}>
+                                        <i> Projects Page. </i>
+                                    </Link>
+                                </h6>
+                            </div>
+
+                            {/*    WORK EXPERIENCE */}
+                            <div className="container-fluid ">
+                                <h1 className="jz_resume_subheading"> Work Experience </h1>
+                            </div>
+                            <div className="container-fluid" style={{margin: '20px'}}>
+                                <h3 className="jz_resume_subheading"> Clinical Research Coordinator
+                                    III </h3>
+                                Massachusetts General Hospital Cancer Center <br/>
+                                2016 - 2019 <br/>
+                                Boston, MA <br/>
+                                Project management of oncology clinical trials by ensuring studies
+                                are conducted within protocol constraints and with
+                                good clinical practice.
+                                <br/><br/>
+                                <h3 className="jz_resume_subheading"> Research Assistant </h3>
+                                Department of Pathology, Brigham and Women’s Hospital <br/>
+                                2014-2015 <br/>
+                                Boston, MA <br/>
+                                Conduct scientific research through laboratory experiments and
+                                procedures to investigate ovarian cancer through use of
+                                murine models to study the effects of genomic variances.
+                                <br/><br/>
+                            </div>
+                            {/* Grid Spacing */}
+                            <div className="col-lg-2">
                             </div>
                         </div>
                     </div>
+
+
                 </div>
-
-
             </div>
         )
     }
