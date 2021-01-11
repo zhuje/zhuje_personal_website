@@ -83,7 +83,7 @@ export default class Resume extends React.Component {
 
 
                             {/*    PROJECTS     */}
-                            <div className="container-fluid">
+                            <div>
                                 <Link to={"/projects"}>
                                     <h1 style={{color: "black"}} className="jz_resume_subheading">
                                         Projects </h1>
@@ -99,7 +99,7 @@ export default class Resume extends React.Component {
                             </div>
 
                             {/*    WORK EXPERIENCE */}
-                            <div className="container-fluid ">
+                            <div>
                                 <h1 className="jz_resume_subheading"> Work Experience </h1>
                             </div>
                             <div className="container-fluid" style={{margin: '20px'}}>
