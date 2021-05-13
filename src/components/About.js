@@ -6,7 +6,7 @@ import '../style/style.About.css'
 export default class About extends React.Component {
     render() {
         return (
-            <div id="wrapper">
+            <div className="dev_about_container_height">
                 <div className="background">
                     <div className="transbox">
                         <h1> About </h1>
@@ -15,8 +15,8 @@ export default class About extends React.Component {
 
                             My name is Jenny Zhu and currently I'm a Master of Science in Computer
                             Science candidate at Northeastern University. I'm looking for a
-                            software development internship or co-op between May 2021 to
-                            December 2021 in the Boston area. <br/><br/>
+                            software development internship starting September 2021 through
+                            the end of December 2021 in the Boston area. <br/><br/>
 
                             Prior to joining the MSCS program, I worked as a clinical research
                             coordinator and a biology researcher studying oncology and neurology.
@@ -30,17 +30,12 @@ export default class About extends React.Component {
                             creative new strategies to overcome challenges. Furthermore, I thrive
                             in team-oriented settings, where communication and time management are
                             especially important. My diverse background, transferable skills,
-                            and MSCS training make me a strong candidate for a variety of roles
-                            within CS. <br/><br/>
+                            and MSCS training make me a strong candidate for a variety of roles.
 
-                            My current goal is to further expand my software development
-                            skillset particularly in the areas of human computer interactions
-                            and user interfaces. During my undergraduate studies I completed a
-                            minor in psychology and would love to learn more about how people
-                            interact with computers and the best approaches in designing
-                            applications that enhance the user experience. To facilitate this deeper
-                            understanding, I am looking for an internship or co-op beginning
-                            May 2021 to December 2021.<br/><br/>
+
+                            <br/><br/>
+
+                            <br/><br/>
                         </p>
                     </div>
                 </div>

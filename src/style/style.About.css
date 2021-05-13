@@ -1,11 +1,12 @@
 div.transbox {
-    margin: 10px;
+    margin: 33px;
     padding: 57px;
     background-color: rgba(0,0,0,0.8);
     opacity: 0.9;
     color: white;
     width: 50%;
     float:right;
+    height:100%
 
 }
 
@@ -15,7 +16,8 @@ div.background {
     background: url(https://drive.google.com/uc?export=view&id=14sSN4MIjAHGROTBld6M164nqNyuD9rcV) repeat center;
     background-size: cover;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
+    height:100%;
 }
 
 #wrapper {
@@ -26,9 +28,20 @@ div.background {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%
 }
 
-#content {
-    min-height: 100%;
+#wrapper {
+    border: 1px solid gray;
+    height: 100%;
+    margin: 0px auto;
+    overflow: hidden;
 }
+
+body, html {
+    height: 100%;
+}
+
+.dev_about_container_height{
+    height:100vh;
+}
+

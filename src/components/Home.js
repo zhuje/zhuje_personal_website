@@ -9,7 +9,7 @@ export default class Home extends React.Component {
                 <div className="row">
                     <div className="col-lg-1 ">
                     </div>
-                    <div className="col-12 col-lg-10">
+                    <div className="col-12 col-lg-10 jz_about_img">
                         <Image
                             className="jz_about_img"
                             src="https://drive.google.com/uc?export=view&id=1kO0MsMif0RB5t2gOUCON7Z1ze9KDmfPL"

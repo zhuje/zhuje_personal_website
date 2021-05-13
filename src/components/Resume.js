@@ -38,13 +38,16 @@ export default class Resume extends React.Component {
                                 <h5 className="jz_resume_subheading">Northeastern </h5>
                                 Boston, MA <br/>
                                 Expected Graduation May 2022 <br/>
-                                <b> GPA : </b> 3.85/4.0 <br/>
+                                <b> GPA : </b> 3.88/4.0 <br/>
                                 <b> Related Coursework: </b>
-                                Web Development, Foundations of Software Engineering,
-                                Object-Oriented Design, Algorithms, Computer Systems, Discrete Math
-                                and
-                                Data Structures, Human Computer Interactions, Human-Center Machine
-                                Learning
+                                Master's Project: Human Centered Machine Learning,
+                                Human Computer Interactions,
+                                Web Development,
+                                Foundations of Software Engineering,
+                                Object-Oriented Design,
+                                Algorithms,
+                                Computer Systems,
+                                Discrete Math and Data Structures
 
                                 <br/><br/>
 
@@ -75,8 +78,14 @@ export default class Resume extends React.Component {
                                 <h1 className="jz_resume_subheading"> Technical Knowledge </h1>
                             </div>
                             <div className="container-fluid" style={{margin: '20px'}}>
+                                <h3 className="jz_resume_subheading"> Web Development </h3>
+                                FrontEnd: React, Angular <br/>
+                                Middleware: NodeJS, Java <br/>
+                                BackEnd: MongoDB, minor exposure to SQL
+                                <br/> <br/>
                                 <h3 className="jz_resume_subheading"> Languages </h3>
                                 Java, Python, C++, C, Javascript, Typescript, HTML, CSS
+                                <br/> <br/>
                                 <h3 className="jz_resume_subheading"> Operating Systems </h3>
                                 Linux, MacOS
                             </div>
@@ -108,7 +117,7 @@ export default class Resume extends React.Component {
                                 Massachusetts General Hospital Cancer Center <br/>
                                 2016 - 2019 <br/>
                                 Boston, MA <br/>
-                                Project management of oncology clinical trials by ensuring studies
+                                Project managed a national prostate cancer clinical trial by ensuring studies
                                 are conducted within protocol constraints and with
                                 good clinical practice.
                                 <br/><br/>

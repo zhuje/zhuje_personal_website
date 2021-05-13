@@ -1,6 +1,7 @@
 .jz_about_img {
     object-fit: contain;
     margin-top: 30px;
+    height: 100%
 }
 
 .img-fluid {
@@ -29,3 +30,4 @@ div.background {
 #content {
     min-height: 100%;
 }
+
