@@ -32,7 +32,7 @@ export default class Projects extends React.Component {
                                     </a>
                                     <Image
                                         className="jz_about_img"
-                                        src="https://drive.google.com/uc?export=view&id=1PwiXF2JE_zuzKGhPeVASxooQIXmXjrCH"
+                                        src="https://user-images.githubusercontent.com/59589720/141153289-58eb0225-d179-431f-8900-ad9395144501.png"
                                         fluid>
                                     </Image>
                                     <br/><br/>
@@ -108,7 +108,7 @@ export default class Projects extends React.Component {
                                     </a>
                                     <Image
                                         className="jz_about_img"
-                                        src="https://drive.google.com/uc?export=view&id=1TDRmzCcqbXnvtek-IbEuhFhJ8R2DBmVJ"
+                                        src="https://user-images.githubusercontent.com/59589720/141153099-7ff06a6f-d13d-49ef-8aca-573f6f58e6bf.png"
                                         fluid>
                                     </Image>
                                     <br/><br/>
