@@ -20,7 +20,7 @@ export default class Resume extends React.Component {
                             {/*    RESUME HEADING    */}
                             <div className="container-fluid ">
                                 <h1 className="jz_resume_heading"> Resume </h1>
-                                <a href={"https://drive.google.com/file/d/1W2GFuJBmr3chIpeBqh_Nq-C05gYe9ufN/view?usp=sharing"}
+                                <a href={"https://docs.google.com/document/d/1xekf8mGGXn8-nJla5dNZrK8F86-sOFa3fsk79mrgi74/edit?usp=sharing"}
                                    style={{color: "black"}}>
                                     PDF Version
                                 </a>
