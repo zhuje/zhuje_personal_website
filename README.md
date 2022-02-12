@@ -1,2 +1,2 @@
-React Application with use of Bootstrap for Design. 
+React Application with use of Bootstrap for design elements. </n>
 https://jennyzhu.herokuapp.com/
